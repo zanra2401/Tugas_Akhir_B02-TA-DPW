@@ -1,0 +1,91 @@
+.content {
+    padding: 0px;
+
+}
+
+.bagian {
+    height: fit-content;
+    min-height: calc(100vh - 95px);
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.bagian-1 {
+    font-size: 28px;
+    word-spacing: 1px;
+    /* background: rgb(224, 225, 245); */
+    background-color: #f3dbc7;
+    align-items: center;
+}
+
+.quote-bagian-1 {
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    width: 600px;
+    margin-bottom: 5px;
+}
+
+.deskripsi {
+    width: 400px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(44, 44, 44);
+    margin-bottom: 20px;
+}
+
+.logo-bagian-1 {
+    width: 300px;
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.right {
+    margin-left: 20px;
+}
+
+.kelas {
+    list-style: none;
+}
+
+.regular, .advance, .perkembangan-bulu-tangkis, .bulu-tangkis-pemula {
+    width: calc(100% / 2);
+    height: 100%;
+}
+
+.perkembangan-bulu-tangkis, .bulu-tangkis-pemula {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.perkembangan-bulu-tangkis > p, .bulu-tangkis-pemula > p {
+    color: rgb(80, 79, 79);
+}
+
+.sub-title-list {
+    list-style: none;
+}
+
+.sub-title-list > h3 {
+    color: rgb(80, 79, 79);
+}
+
+.sub-title-list > ul {
+    color: rgb(80, 79, 79);
+}
+
+.title-list {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.bagian-3 {
+    background-color: #f3dbc7;
+}
+
+.bagian-4 {
+    padding-bottom: 40px;
+}
