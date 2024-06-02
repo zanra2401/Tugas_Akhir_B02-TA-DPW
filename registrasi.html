@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SIDEBAR</title>
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link rel="stylesheet" href="css/register.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<div class="logo-name">
+			<img class="logo-header" src="badminton.svg" alt="">
+			<h3>Victory Badminton</h3>
+		</div>
+		<a href="" class="register">Daftar</a>
+	</div>
+	<div class="sidebar">
+
+	</div>
+	<div class="menu">
+		<ul class="menu-list">
+			<li><a href="index.html"">Home</a></li>
+			<li>Evaluation</li>
+			<li>About Us</li>
+		</ul>
+	</div>
+	<div class="content">
+		<!-- <form method="post" class="registrasi-form" onsubmit="submited()">
+			<label for="nama">Nama: </label>
+			<div id="error-nama" class="error"></div>
+			<input class="input input-text" type="text" name="nama" id="nama">
+
+			<label for="nomer-handphone">Nomor Handphone: </label>
+			<div id="error-nomer-handphone" class="error"></div>
+			<input class="input input-text" type="text" name="nomer-handphone" id="nomer-handphone">
+
+			<label for="email">Email (wajib gmail): </label>
+			<div id="error-email" class="error"></div>
+			<input class="input input-text" type="text" name="email" id="email">
+
+			<label for="kelas">Kelas: </label>
+			<select class="input" id="kelas" name="kelas">
+				<option value="1">Kelas 1</option>
+				<option value="">kelas 2</option>
+				<option value="3">kelas 3</option>
+			</select>
+
+			<label for="tanggal-lahir">Tanggal Lahir: </label>
+			<input type="text" class="input input-text" name="tanggal-lahir" id="tanggal-lahir">
+
+			<div>Gender: </div>
+			<div class="input" id="gender-select" class="gender">
+				<label for="laki-laki">Laki Laki</label>
+				<input type="radio" name="gender" id="laki-laki">
+				<label for="perempuan">Perempuan</label>
+				<input type="radio" name="gender" id="perempuan">
+			</div>
+			<div id="error-gender"></div>
+
+			<div>Ketersediaan waktu: </div>
+			<div id="error-ketersediaan" class="error"></div>
+			<div class="input" class="ketersediaan">
+				<label for="pagi">Pagi: </label>
+				<input type="checkbox" name="ketersediaan" id="pagi">
+				<label for="siang">Siang: </label>
+				<input type="checkbox" name="ketersediaan" id="siang">
+				<label for="sore">Sore: </label>
+				<input type="checkbox" name="ketersediaan" id="Sore">
+			</div>
+
+			<label for="alamat">Alamat: </label>
+			<div id="error-alamat" class="error"></div>
+			<textarea class="input-text" name="alamat" id="alamat" cols="10" rows="5"></textarea>
+
+			<input type="submit" id="submit">
+		</form> -->
+		<form action="" class="registrasi-form">
+			<input type="text" placeholder="Nama Lengkap" class="input-box">
+			<input type="text" placeholder="Email" class="input-box">
+			<input type="text" placeholder="Nomer Ponsel" class="input-box">
+			<div class="gender input-box">
+				<div class="gender-label label">
+					Kelas 
+				</div>
+				<div class="laki-laki">	
+					<label for="laki-laki">Regular</label>
+					<input type="radio" name="gender" id="laki-laki">
+				</div>
+				<div class="perempuan">
+					<label for="perempuan">Advance</label>
+					<input type="radio" name="gender" id="perempuan">
+				</div>
+			</div>
+			<div class="input-box jadwal">
+				<div class="jadwal-label label">
+					Jadwal 
+				</div>
+				<input type="date" id="jadwal">
+				<!-- <select name="kelas" id="jadwal">
+					<option value="minggu-pagi">Minggu 09:00 - 11:00</option>
+					<option value="minggu-siang">Minggu  13:00 - 15:00</option>
+					<option value="minggu-sore">Minggu 15:30 - 17:30</option>
+				</select> -->
+			</div>
+			<div class="input-box mentor">
+				<div class="mentor-label label">
+					Mentor
+				</div>
+				<select id="mentor">
+					<option value="mentor-1">mentor</option>
+				</select>
+			</div>
+			<textarea name="alamat" id="alamat">Alamat</textarea>
+			<input type="submit" id="submit">
+		</form>
+	</div>
+	<div class="footer">
+
+	</div>
+	<script src="form_validasi.js"></script>
+</body>
+</html
