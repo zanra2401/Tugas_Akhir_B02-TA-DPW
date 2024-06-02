@@ -88,9 +88,3 @@ function submited() {
         error_email.innerHTML = ""
     }
 }
-// fungsi untuk mengecek tahun 2024 keatas
-function validasi_tgl(){
-	event.preventDefault()
-	regex = /^([2][0-9][2][4-9])|([2][1-9][0-9][0-9])|([3-9][0-9][0-9][0-9])(\-)([0][1-9]|[1][1-2])(\-)([0-2][0-9]|[3][0-1])/g // 2024 - 9999
-	console.log(regex.test(inp.value))
-}
