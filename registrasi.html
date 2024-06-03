@@ -13,7 +13,7 @@
 <body>
 	<div class="header">
 		<div class="logo-name">
-			<img class="logo-header" src="badminton.svg" alt="">
+			<img class="logo-header" src="asset/badminton.svg" alt="">
 			<h3>Victory Badminton</h3>
 		</div>
 		<a href="" class="register">Daftar</a>
@@ -78,21 +78,22 @@
 
 			<input type="submit" id="submit">
 		</form> -->
-		<form action="" class="registrasi-form">
+		<form action="" class="registrasi-form" onsubmit="onSubmit()">
 			<input type="text" placeholder="Nama Lengkap" class="input-box">
+			<div class="pesan-err err-nama"></div>
 			<input type="text" placeholder="Email" class="input-box">
 			<input type="text" placeholder="Nomer Ponsel" class="input-box">
-			<div class="gender input-box">
-				<div class="gender-label label">
+			<div class="kelas input-box">
+				<div class="kelas-label label">
 					Kelas 
 				</div>
-				<div class="laki-laki">	
-					<label for="laki-laki">Regular</label>
-					<input type="radio" name="gender" id="laki-laki">
+				<div class="regular">	
+					<label for="regular">Regular</label>
+					<input type="radio" name="gender" id="regular">
 				</div>
-				<div class="perempuan">
-					<label for="perempuan">Advance</label>
-					<input type="radio" name="gender" id="perempuan">
+				<div class="advance">
+					<label for="advance">Advance</label>
+					<input type="radio" name="gender" id="advance">
 				</div>
 			</div>
 			<div class="input-box jadwal">
@@ -100,12 +101,8 @@
 					Jadwal 
 				</div>
 				<input type="date" id="jadwal">
-				<!-- <select name="kelas" id="jadwal">
-					<option value="minggu-pagi">Minggu 09:00 - 11:00</option>
-					<option value="minggu-siang">Minggu  13:00 - 15:00</option>
-					<option value="minggu-sore">Minggu 15:30 - 17:30</option>
-				</select> -->
 			</div>
+			<div class="pesan-err" id="jadwal-err"></div>
 			<div class="input-box mentor">
 				<div class="mentor-label label">
 					Mentor
