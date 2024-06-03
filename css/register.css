@@ -94,7 +94,7 @@
 	padding: 5px;
 }
 
-.gender, .jadwal, .mentor {
+.kelas, .jadwal, .mentor {
 	display: flex;
 	align-items: center;
 	border: 1px solid rgb(129, 127, 127);
@@ -113,7 +113,7 @@
 	height: 100%;
 }
 
-#laki-laki {
+#regular {
 	margin-right: 10px;
 }
 
@@ -127,4 +127,12 @@
 	font-weight: 900;
 	margin-top: 20px;
 	width: 360px;
+}
+
+.pesan-err {
+	display: flex;
+	width: 360px;
+	justify-content: start;
+	font-family: serif;
+	color: red;
 }
