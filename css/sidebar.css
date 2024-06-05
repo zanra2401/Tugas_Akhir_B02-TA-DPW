@@ -11,8 +11,8 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 60px;
-	background-color: #333333;
+	height: 90px;
+	background-color: #7432F9;
 	position: fixed;
 	top: 0;
 }
@@ -37,9 +37,9 @@ body {
 	padding: 5px;
 	font-weight: 900;
 	color: rgb(27, 27, 27);
-	background-color: rgb(248, 248, 248);
+	background-color: white;
 	position: fixed;
-	top: 60px;
+	top: 90px;
 }
 
 .menu-list {
@@ -67,45 +67,87 @@ body {
 	color: rgb(10, 102, 1);
 }
 
-.register {
-	text-decoration: none;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: rgb(7, 7, 252);
-	border-radius: 2px;
-	color: white;
-	font-weight: 700;
-	font-size: 16px;
-	letter-spacing: 1.5px;
-}
-
-.register:hover {
-	background-color: rgb(255, 255, 255);
-	color: rgb(27, 27, 27);
-}
-
 .sidebar{
-	height: calc(100vh - 60px);
+	height: calc(100vh - 90px);
 	width: 300px;
 	background-color: rgb(255, 255, 255);
 	float: left;
 	position: fixed;
 	z-index: 1;
-	top: 60px;
+	top: 90px;
+	box-sizing: border-box;
+	padding: 10px;
+	border-right: .5px solid gray ;	
+}
+
+/* .sidebar-mentor {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+	height: 150px;
+    border-radius: 2px;
+    display: flex;
+	border: .5px solid rgb(219, 217, 217);
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.nama-mentor-sidebar {
+    margin: 0px;
+}
+
+.deskripsi-mentor-sidebar {
+    color: rgb(52, 51, 51);
+    font-weight: 500;
+	font-size: 12px;
+}
+
+.mentor-profile-sidebar {
+    padding-left: 10px;
+}
+
+.sidebar-mentor > img {
+    height: 100%; 
+    background-color: blue;
+    background-color: rgb(235, 235, 235);
+    border-radius: 3px;   
+} */
+
+.faq {
+	width: 100%;
+    box-sizing: border-box;
+	height: auto;
+    border-radius: 2px;
+	border: .5px solid rgb(219, 217, 217);
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.question {
+	border-bottom: 1px solid rgb(120, 117, 117);
+	padding: 10px;
+	font-weight: 600;
+}
+
+.answer {
+	padding: 10px;
+	color: rgb(47, 46, 46);
 }
 
 .content {
 	height: fit-content;
 	min-height: calc(100vh - 95px);
-	margin-top: 95px;
-	background: rgb(247, 241, 241);
+	margin-top: 125px;
+	background-color: #FFFFFF;
 }
 
 .footer {
-	height: 200px;
+	height: 300px;
 	background-color: rgb(7, 8, 34);
+	background-color:#F8F9FA;
+	display: flex;
+	box-sizing: border-box;
+	padding: 20px;
 }
 
 .logo-header {
