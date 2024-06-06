@@ -1,160 +1,128 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: "Roboto", sans-serif;
-	overflow-x: hidden;
-	
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
 }
 
 .header {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 90px;
-	background-color: #7432F9;
-	position: fixed;
-	top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    background-color: #7432f9;
+    position: fixed;
+    top: 0;
 }
 
 .header > a {
-	margin-right: 30px;
+    margin-right: 30px;
 }
 
 .logo-name > h3 {
-	margin-left: 20px;
-	color: white;
-	letter-spacing: 1px;
+    margin-left: 20px;
+    color: white;
+    letter-spacing: 1px;
 }
 
-.menu, .content, .footer {
-	width: calc(100% - 300px);
-	margin-left: 300px;
+.menu,
+.content,
+.footer {
+    width: calc(100% - 300px);
+    margin-left: 300px;
 }
 
 .menu {
-	height: 25px;
-	padding: 5px;
-	font-weight: 900;
-	color: rgb(27, 27, 27);
-	background-color: white;
-	position: fixed;
-	top: 90px;
+    height: 25px;
+    padding: 5px;
+    font-weight: 900;
+    color: rgb(27, 27, 27);
+    background-color: white;
+    position: fixed;
+    top: 90px;
 }
 
 .menu-list {
-	list-style: none;
-	display: flex;
-	align-items: center;
-	margin: 0px;
-	margin-right: 20px;
-	justify-content: flex-end;
-	height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    margin-right: 20px;
+    justify-content: flex-end;
+    height: 100%;
 }
 
 .menu-list > li {
-	margin-left: 20px;
-	margin-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .menu-list > li > a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
 
-.menu-list > li:hover{
-	cursor: pointer;
-	color: rgb(10, 102, 1);
+.menu-list > li:hover {
+    cursor: pointer;
+    color: rgb(10, 102, 1);
 }
 
-.sidebar{
-	height: calc(100vh - 90px);
-	width: 300px;
-	background-color: rgb(255, 255, 255);
-	float: left;
-	position: fixed;
-	z-index: 1;
-	top: 90px;
-	box-sizing: border-box;
-	padding: 10px;
-	border-right: .5px solid gray ;	
-}
-
-/* .sidebar-mentor {
-    width: 100%;
+.sidebar {
+    height: calc(100vh - 90px);
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    position: fixed;
+    z-index: 1;
+    top: 90px;
     box-sizing: border-box;
-    padding: 5px;
-	height: 150px;
-    border-radius: 2px;
-    display: flex;
-	border: .5px solid rgb(219, 217, 217);
-	margin-top: 10px;
-	margin-bottom: 10px;
+    padding: 10px;
+    border-right: 0.5px solid gray;
 }
-
-.nama-mentor-sidebar {
-    margin: 0px;
-}
-
-.deskripsi-mentor-sidebar {
-    color: rgb(52, 51, 51);
-    font-weight: 500;
-	font-size: 12px;
-}
-
-.mentor-profile-sidebar {
-    padding-left: 10px;
-}
-
-.sidebar-mentor > img {
-    height: 100%; 
-    background-color: blue;
-    background-color: rgb(235, 235, 235);
-    border-radius: 3px;   
-} */
 
 .faq {
-	width: 100%;
+    width: 100%;
     box-sizing: border-box;
-	height: auto;
+    height: auto;
     border-radius: 2px;
-	border: .5px solid rgb(219, 217, 217);
-	margin-top: 10px;
-	margin-bottom: 10px;
+    border: 0.5px solid rgb(219, 217, 217);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .question {
-	border-bottom: 1px solid rgb(120, 117, 117);
-	padding: 10px;
-	font-weight: 600;
+    border-bottom: 1px solid rgb(120, 117, 117);
+    padding: 10px;
+    font-weight: 600;
 }
 
 .answer {
-	padding: 10px;
-	color: rgb(47, 46, 46);
+    padding: 10px;
+    color: rgb(47, 46, 46);
 }
 
 .content {
-	height: fit-content;
-	min-height: calc(100vh - 95px);
-	margin-top: 125px;
-	background-color: #FFFFFF;
+    height: fit-content;
+    min-height: calc(100vh - 95px);
+    margin-top: 125px;
+    background-color: #ffffff;
 }
 
 .footer {
-	height: 300px;
-	background-color: rgb(7, 8, 34);
-	background-color:#F8F9FA;
-	display: flex;
-	box-sizing: border-box;
-	padding: 20px;
+    height: 300px;
+    background-color: rgb(7, 8, 34);
+    background-color: #f8f9fa;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .logo-header {
-	width: 40px;
-	margin-left: 20px;
+    width: 40px;
+    margin-left: 20px;
 }
 
 .logo-name {
-	display: flex;
+    display: flex;
 }

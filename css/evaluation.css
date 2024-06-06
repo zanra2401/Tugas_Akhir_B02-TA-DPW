@@ -1,0 +1,53 @@
+/* table evaluasi */
+.content {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.evaluasi {
+    background-color: #f3dbc7;
+    max-width: 1000 px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10 px;
+    border-collapse: collapse;
+    flex-direction: column;
+}
+
+.judul {
+    text-align: center;
+    color: #282828;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #bbb;
+    text-align: center;
+    padding: 8px 20px;
+}
+
+th {
+    height: 60px;
+    width: 200px;
+    background-color: #f9e6b2;
+    color: 282828;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 5%; /* Menetapkan lebar kolom pertama menjadi 30% */
+}
+
+td:nth-child(1),
+td:nth-child(2) {
+    text-align: left;
+    padding-left: 15px;
+}
