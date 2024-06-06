@@ -18,93 +18,62 @@
 		</div>
 	</div>
 	<div class="sidebar">
-		<div class="faq">
-			<div class="question">
-				Apakah pembayaran bisa di kembalikan saat pelatih tidak profesional?
+	        <div class="faq">
+				<div class="question">
+					Apakah pembayaran bisa di kembalikan saat pelatih tidak profesional?
+				</div>
+				<div class="answer">
+					Tentu saja
+				</div>
 			</div>
-			<div class="answer">
-				Tentu saja
+			<div class="faq">
+				<div class="question">
+					Kelas mana yang cocok untuk pemula?
+				</div>
+				<div class="answer">
+					Kelas reguler sangat cocok untuk anda yang baru memulai belajar badminton.
+				</div>
 			</div>
-		</div>
+			<div class="faq">
+				<div class="question">
+					Bagaimana cara mengikuti kursus?
+				</div>
+				<div class="answer">
+					Masuk link pada halaman depan web, kemudian isi form yang tersedia.
+				</div>
+			</div>
 	</div>
 	<div class="menu">
 		<ul class="menu-list">
 			<li><a href="index.html">Home</a></li>
-			<li><a href="">Evaluation</a></li>
+			<li><a href="evaluation.html">Evaluation</a></li>
 			<li><a href="about-us.html">About Us</a></li>
 		</ul>
 	</div>
 	<div class="content">
-		<!-- <form method="post" class="registrasi-form" onsubmit="submited()">
-			<label for="nama">Nama: </label>
-			<div id="error-nama" class="error"></div>
-			<input class="input input-text" type="text" name="nama" id="nama">
-
-			<label for="nomer-handphone">Nomor Handphone: </label>
-			<div id="error-nomer-handphone" class="error"></div>
-			<input class="input input-text" type="text" name="nomer-handphone" id="nomer-handphone">
-
-			<label for="email">Email (wajib gmail): </label>
-			<div id="error-email" class="error"></div>
-			<input class="input input-text" type="text" name="email" id="email">
-
-			<label for="kelas">Kelas: </label>
-			<select class="input" id="kelas" name="kelas">
-				<option value="1">Kelas 1</option>
-				<option value="">kelas 2</option>
-				<option value="3">kelas 3</option>
-			</select>
-
-			<label for="tanggal-lahir">Tanggal Lahir: </label>
-			<input type="text" class="input input-text" name="tanggal-lahir" id="tanggal-lahir">
-
-			<div>Gender: </div>
-			<div class="input" id="gender-select" class="gender">
-				<label for="laki-laki">Laki Laki</label>
-				<input type="radio" name="gender" id="laki-laki">
-				<label for="perempuan">Perempuan</label>
-				<input type="radio" name="gender" id="perempuan">
-			</div>
-			<div id="error-gender"></div>
-
-			<div>Ketersediaan waktu: </div>
-			<div id="error-ketersediaan" class="error"></div>
-			<div class="input" class="ketersediaan">
-				<label for="pagi">Pagi: </label>
-				<input type="checkbox" name="ketersediaan" id="pagi">
-				<label for="siang">Siang: </label>
-				<input type="checkbox" name="ketersediaan" id="siang">
-				<label for="sore">Sore: </label>
-				<input type="checkbox" name="ketersediaan" id="Sore">
-			</div>
-
-			<label for="alamat">Alamat: </label>
-			<div id="error-alamat" class="error"></div>
-			<textarea class="input-text" name="alamat" id="alamat" cols="10" rows="5"></textarea>
-
-			<input type="submit" id="submit">
-		</form> -->
 		<form action="" class="registrasi-form" onsubmit="onSubmit()">
-			<input type="text" placeholder="Nama Lengkap" class="input-box">
-			<div class="pesan-err err-nama"></div>
-			<input type="text" placeholder="Email" class="input-box">
-			<input type="text" placeholder="Nomer Ponsel" class="input-box">
+			<input type="text" id="nama" placeholder="Nama" class="input-box">
+			<div class="pesan-err" id="err-nama"></div>
+			<input type="text" placeholder="Email" id="email" class="input-box">
+			<input type="text" placeholder="Nomer Ponsel" id="nomer-handphone" class="input-box">
+			<div class="pesan-err" id="err-nomer"></div>
 			<div class="kelas input-box">
 				<div class="kelas-label label">
-					Kelas 
+					Kelas
 				</div>
-				<div class="regular">	
+				<div class="regular">
 					<label for="regular">Regular</label>
-					<input type="radio" name="gender" id="regular">
+					<input type="radio" name="kelas" id="regular">
 				</div>
 				<div class="advance">
 					<label for="advance">Advance</label>
-					<input type="radio" name="gender" id="advance">
+					<input type="radio" name="kelas" id="advance">
 				</div>
 			</div>
+			<div class="pesan-err" id="err-kelas"></div>
 			<div class="input-box jadwal">
 				<div class="jadwal-label label">
-					Jadwal 
+					Jadwal
 				</div>
 				<input type="date" id="jadwal">
 			</div>
@@ -117,7 +86,8 @@
 					<option value="mentor-1">mentor</option>
 				</select>
 			</div>
-			<textarea name="alamat" id="alamat">Alamat</textarea>
+			<textarea name="alamat" id="alamat" placeholder="Alamat"></textarea>
+			<div class="pesan-err" id="err-alamat"></div>
 			<input type="submit" id="submit">
 		</form>
 	</div>
