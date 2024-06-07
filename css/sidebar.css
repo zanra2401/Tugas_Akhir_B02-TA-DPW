@@ -115,6 +115,7 @@ body {
     background-color: #f8f9fa;
     display: flex;
     box-sizing: border-box;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -125,4 +126,46 @@ body {
 
 .logo-name {
     display: flex;
+}
+.minnerlist {
+    margin: 20px;
+    text-decoration: none;
+    width: 90%;
+}
+
+.innerside {
+    margin: 10px;
+    text-align: center;
+    color: black;
+    width: 90%;
+}
+
+.line1 {
+    border: 0px;
+    height: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 140px;
+    width: 100%;
+}
+
+.circle {
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+}
+
+.icon {
+    width: 50%;
+    height: 50%;
 }
