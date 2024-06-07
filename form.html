@@ -1,99 +1,151 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Form Pelatihan</title>
-	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
-	<link rel="stylesheet" href="css/register.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div class="header">
-		<div class="logo-name">
-			<img class="logo-header" src="asset/badminton.svg" alt="">
-			<h3>Victory Badminton</h3>
-		</div>
-	</div>
-	<div class="sidebar">
-	        <div class="faq">
-				<div class="question">
-					Apakah pembayaran bisa di kembalikan saat pelatih tidak profesional?
-				</div>
-				<div class="answer">
-					Tentu saja
-				</div>
-			</div>
-			<div class="faq">
-				<div class="question">
-					Kelas mana yang cocok untuk pemula?
-				</div>
-				<div class="answer">
-					Kelas reguler sangat cocok untuk anda yang baru memulai belajar badminton.
-				</div>
-			</div>
-			<div class="faq">
-				<div class="question">
-					Bagaimana cara mengikuti kursus?
-				</div>
-				<div class="answer">
-					Masuk link pada halaman depan web, kemudian isi form yang tersedia.
-				</div>
-			</div>
-	</div>
-	<div class="menu">
-		<ul class="menu-list">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="evaluation.html">Evaluation</a></li>
-			<li><a href="about-us.html">About Us</a></li>
-		</ul>
-	</div>
-	<div class="content">
-		<form action="" class="registrasi-form" onsubmit="onSubmit()">
-			<input type="text" id="nama" placeholder="Nama" class="input-box">
-			<div class="pesan-err" id="err-nama"></div>
-			<input type="text" placeholder="Email" id="email" class="input-box">
-			<input type="text" placeholder="Nomer Ponsel" id="nomer-handphone" class="input-box">
-			<div class="pesan-err" id="err-nomer"></div>
-			<div class="kelas input-box">
-				<div class="kelas-label label">
-					Kelas
-				</div>
-				<div class="regular">
-					<label for="regular">Regular</label>
-					<input type="radio" name="kelas" id="regular">
-				</div>
-				<div class="advance">
-					<label for="advance">Advance</label>
-					<input type="radio" name="kelas" id="advance">
-				</div>
-			</div>
-			<div class="pesan-err" id="err-kelas"></div>
-			<div class="input-box jadwal">
-				<div class="jadwal-label label">
-					Jadwal
-				</div>
-				<input type="date" id="jadwal">
-			</div>
-			<div class="pesan-err" id="jadwal-err"></div>
-			<div class="input-box mentor">
-				<div class="mentor-label label">
-					Mentor
-				</div>
-				<select id="mentor">
-					<option value="mentor-1">mentor</option>
-				</select>
-			</div>
-			<textarea name="alamat" id="alamat" placeholder="Alamat"></textarea>
-			<div class="pesan-err" id="err-alamat"></div>
-			<input type="submit" id="submit">
-		</form>
-	</div>
-	<div class="footer">
+<!doctype html>
+<html lang="id">
+    <head>
+     <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Form Bimbingan</title>
+        <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/register.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <linkvhref="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"rel="stylesheet">
 
-	</div>
-	<script src="js/validasi.js"></script>
-</body>
-</html
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo-name">
+                <img class="logo-header" src="asset/badminton.svg" alt="" />
+                <h3>Victory Badminton</h3>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="faq">
+                <div class="question">
+                    Apakah pembayaran bisa di kembalikan saat pelatih tidak
+                    profesional?
+                </div>
+                <div class="answer">Tentu saja</div>
+            </div>
+            <div class="faq">
+                <div class="question">Kelas mana yang cocok untuk pemula?</div>
+                <div class="answer">
+                    Kelas reguler sangat cocok untuk anda yang baru memulai
+                    belajar badminton.
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question">Bagaimana cara mengikuti kursus?</div>
+                <div class="answer">
+                    Masuk link pada halaman depan web, kemudian isi form yang
+                    tersedia.
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="evaluation.html">Evaluation</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <form action="" class="registrasi-form" onsubmit="onSubmit()">
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Nama"
+                    class="input-box"
+                />
+                <div class="pesan-err" id="err-nama"></div>
+                <input
+                    type="text"
+                    placeholder="Email"
+                    id="email"
+                    class="input-box"
+                />
+                <input
+                    type="text"
+                    placeholder="Nomer Ponsel"
+                    id="nomer-handphone"
+                    class="input-box"
+                />
+                <div class="pesan-err" id="err-nomer"></div>
+                <div class="kelas input-box">
+                    <div class="kelas-label label">Kelas</div>
+                    <div class="regular">
+                        <label for="regular">Regular</label>
+                        <input type="radio" name="kelas" id="regular" />
+                    </div>
+                    <div class="advance">
+                        <label for="advance">Advance</label>
+                        <input type="radio" name="kelas" id="advance" />
+                    </div>
+                </div>
+                <div class="pesan-err" id="err-kelas"></div>
+                <div class="input-box jadwal">
+                    <div class="jadwal-label label">Jadwal</div>
+                    <input type="date" id="jadwal" />
+                </div>
+                <div class="pesan-err" id="jadwal-err"></div>
+                <div class="input-box mentor">
+                    <div class="mentor-label label">Mentor</div>
+                    <select id="mentor">
+                        <option value="mentor-1">mentor</option>
+                    </select>
+                </div>
+                <textarea
+                    name="alamat"
+                    id="alamat"
+                    placeholder="Alamat"
+                ></textarea>
+                <div class="pesan-err" id="err-alamat"></div>
+                <div class="input-box pernyataan">
+                    <input
+                        type="checkbox"
+                        class="pernyataan-check"
+                        id="pernyataan1"
+                    />
+                    <label for="pernyataan1"
+                        >setuju untuk membagikan informasi ini dengan
+                        kami</label
+                    >
+                </div>
+                <div class="input-box pernyataan">
+                    <input
+                        type="checkbox"
+                        class="pernyataan-check"
+                        id="pernyataan2"
+                    />
+                    <label for="pernyataan2"
+                        >setuju untuk mematuhi peraturan kami</label
+                    >
+                </div>
+                <div class="pesan-err" id="err-pernyataan"></div>
+                <input type="submit" id="submit" />
+            </form>
+        </div>
+        <div class="footer">
+             <div class="innerside">
+                    <div class="icontainer">
+                        <div class="circle">
+                            <a href="https://www.facebook.com/miyura.miyura.372">
+                                <img class="icon" src="asset/fb.png" alt="fb-icon">
+                            </a>
+                        </div>
+                        <div class="circle">
+                            <a href="https://instagram.com/restorika.resto?igshid=MzRlODBiNWFlZA==">
+                                <img class="icon" src="asset/ig-icon.png" alt="ig-icon">
+                            </a>
+                        </div>
+                        <div class="circle">
+                            <a href="https://twitter.com/You38059263">
+                                <img class="icon" src="asset/Twitter.png" alt="tt-icon">
+                            </a>
+                        </div><br>
+                    </div>
+                    <p>Contact: 085731788379<br>Alamat kantor: Jl.madura,Kab.Bangkalan</p>
+                    <div>Copyright 1999-2024 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.</div>
+        </div>
+        <script src="js/validasi.js"></script>
+    </body>
+</html>
