@@ -1,0 +1,135 @@
+
+/* menimpa style default yang ada pada layout css */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    color: rgb(53, 52, 52);
+}
+
+/* memberikan style pada form atau bisa di sebut container inputan nya */
+.registrasi-form {
+    width: 600px;
+    /* display flex */
+    display: flex;
+    /* flex direction untuk mengatur content akan tertata horizontal untuk row dan di 
+    kasus ini vertical untuk column */
+    flex-direction: column;
+    /* box sizing border box berfungsi agar element memiliki ukurang yang fix seperti yang di tetapkan 600px, tidak berubah jika di kasih padding */
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 3px;
+    /* shadow horizontal dan vertical 0px agar di tengah dan blurr nya 3px dan ketebalanya 0.5px warna gray */
+    box-shadow: 0px 0px 3px 0.5px gray;
+    /* karna ini flex column align item center menata content secara vertical ke tengah  */
+    align-items: center;
+    padding: 20px;
+    /* padding atas */
+    padding-top: 10px;
+    /* padding bawah */
+    padding-bottom: 10px;
+}
+
+/* untuk beberapa element input agar memiliki style yang sama */
+.input-box {
+    padding: 5px;
+    font-weight: 900;
+    /* warna outline jika di focus kan akan berubah menjadi biru */
+    outline-color: blue;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* alamat */
+#alamat {
+    /* memiliki panjang maksimal 100% */
+    max-width: 100%;
+    /* memiliki panjang minimal 100% */
+    /* di berikan panjang maksimal dan minimal 100% agar ukuranya tetap dan tidak bisa di resize, karena text area dapat di resize */
+    min-width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    /* min dan max height sama seperti width agar tingginya fix */
+    min-height: 150px;
+    max-height: 150px;
+    padding: 5px;
+}
+
+/* untuk container div yang menampung inputan */
+.kelas,
+.jadwal,
+.mentor {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(129, 127, 127);
+    border-radius: 2px;
+}
+
+/* merestyle label */
+.label {
+    margin-right: 10px;
+    height: 100%;
+    padding-right: 20px;
+    width: 70px;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+}
+
+#jadwal,
+#mentor {
+    width: 100%;
+    height: 100%;
+}
+
+
+#regular {
+    margin-right: 10px;
+}
+
+/* tombol submit */
+#submit {
+    background-color: rgb(96, 96, 245);
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    color: white;
+    font-weight: 900;
+    margin-top: 20px;
+    width: 360px;
+}
+
+
+#submit:hover {
+    /* ketika tombol submit di hover cursor akan beruhan menjadi tangan menunjuk */
+    cursor: pointer;
+    /* warna berubah ketika di hover */
+    background-color: rgb(119, 119, 247);
+}
+
+/* desain pesan error nya */
+.pesan-err {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    font-family: serif;
+    color: red;
+}
+
+#err-alamat {
+    margin-bottom: 20px;
+}
+
+.pernyataan {
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.pernyataan-check {
+    margin: 0px;
+}

@@ -2,19 +2,46 @@
     padding: 0px;
 }
 
+/* Style difault untuk setiap bagian */
 .bagian {
-    height: fit-content;
-    min-height: calc(100vh - 95px);
+    /* Tinggi menyesuaikan dari content yang di miliki */
+    height: fit-content; 
+    /* memiliki minimal tinggi seperti tingi layar browser di kurangi tinggi dari header dan menu yaitu 95px*/
+    min-height: calc(100vh - 95px); 
+    /* memiliki lebar 100% seperti parent */
     width: 100%;
+    /* mengubah display menjadi flex untuk layouting */
     display: flex;
+    /* align-items start akan membuat kontent brada di awal dari element secara vertikal 
+        jika flex-direction nya adalah row jika flex direction nya column align-items start akan
+        membuat content berada pada awal element secara horizonral
+    */
     align-items: start;
+    /* kebalikan nya dari align items, namun di sini membuat element ke tengah */
     justify-content: center;
 }
 
+/* default style untuk konten bagian kiri  */
+.left {
+    margin-right: 20px;
+}
+
+/* default style untuk konten bagian kanan */
+.right {
+    margin-left: 20px;
+}
+
+
+
+
+
+/* Style bagian satu bagian paling atas di homepage */
 .bagian-1 {
     font-size: 28px;
+    /* word-spacing berfungsi untuk memberikan jarak antar kata di sini 1px */
     word-spacing: 1px;
-    background-image: linear-gradient(to bottom, #f8f9fa, white);
+    /* warna backround menjadi gradient dari warna #f8f9fa ke warna putih dari atas ke bawah*/
+    background-color: linear-gradient(to bottom, #f8f9fa, white); 
     align-items: center;
 }
 
@@ -28,6 +55,7 @@
 .deskripsi {
     width: 400px;
     font-size: 16px;
+    /* ketebalan font */
     font-weight: 600;
     color: rgb(44, 44, 44);
     margin-bottom: 20px;
@@ -37,38 +65,39 @@
     width: 300px;
 }
 
-.left {
-    margin-right: 20px;
+.register {
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(7, 7, 252);
+    /* kelengkungan pojok */
+    border-radius: 2px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    /* spasi antar huruf */
+    letter-spacing: 1.5px;
 }
 
-.right {
-    margin-left: 20px;
+.register:hover {
+    background-color: rgb(140, 138, 222);
 }
+
+
+
+
+
+/* bagian ke dua atau bagian kelas */
+
 
 .kelas {
     list-style: none;
 }
 
-.regular,
-.advance,
-.perkembangan-bulu-tangkis,
-.bulu-tangkis-pemula {
-    width: calc(100% / 2);
-    height: 100%;
-}
-
-.perkembangan-bulu-tangkis,
-.bulu-tangkis-pemula {
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.perkembangan-bulu-tangkis > p,
-.bulu-tangkis-pemula > p {
-    color: rgb(80, 79, 79);
-}
-
 .sub-title-list {
+    /* penanda list nya di buat tidak ada */
     list-style: none;
 }
 
@@ -85,20 +114,25 @@
     margin-top: 50px;
 }
 
+
+
+
+/* Bagian 3 bagian ini berisi mentor */
 .bagian-3 {
     display: flex;
     align-items: center;
 }
 
-.bagian-4 {
-    padding-bottom: 40px;
-}
-
 .mentor-container {
     width: 80%;
+    /* memiliki display flex */
     display: flex;
+    /* flex direction colum content akan tersusun vertical */
     flex-direction: column;
+    /* space-between akan membuat content akan saling berjarak satu sama lain secara vertical karena di sini flex direction nya column */
     justify-content: space-between;
+    /* align items secara horizontal karena flex directionya column */
+    align-items: center;
 }
 
 .mentor-row {
@@ -107,16 +141,29 @@
     justify-content: space-between;
 }
 
+.pelatih-title {
+    width: 100%;
+    /* memberik border bawah ketebalan 1px  dan warna hitam */
+    border-bottom: 1px solid rgb(10, 10, 10, 1.0);
+}
+
 .mentor {
     width: 50%;
     height: 200px;
+    /* box-sizin: border box berfungsi untuk membuat element memiliki ukuran yang tetap jika di beri margin  atau padding */
+    /* karena jika tidak, saat kita memberi padding atau margin ukuran dari element akan bertambah atau berkuran */
     box-sizing: border-box;
     padding: 5px;
-    margin: 10px;
+    margin: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
     border-radius: 2px;
     display: flex;
     border: 0.5px solid rgb(219, 217, 217);
+    /* bayang bayang dari element horizontal 0px dan vertical 0px agar di tengah, blur 4px, dan ketebalan 0.1px   */
+    box-shadow: 0px 0px 4px .1px rgb(82, 80, 80);
 }
+
 
 .nama-mentor {
     margin: 0px;
@@ -133,25 +180,40 @@
 
 .mentor > img {
     height: 100%;
-    background-color: blue;
-    background-color: rgb(235, 235, 235);
     border-radius: 3px;
 }
 
-.register {
-    text-decoration: none;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: rgb(7, 7, 252);
-    border-radius: 2px;
-    color: white;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 1.5px;
+/* Bagian terakhir homepage bagian hanya berisi text */
+
+.bagian-4 {
+    padding-bottom: 40px;
+    
 }
 
-.register:hover {
-    background-color: rgb(140, 138, 222);
+.perkembangan-bulu-tangkis,
+.bulu-tangkis-pemula {
+    /* text-align justify membuat text rata kiri kanan */
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.title-bagian-4 {
+    /* membuat judul text-align left agar tidak rata kiri kanan 
+    karena judul ada di dalam perkembangan-bulu-tangkis dan bulu-tangkis-pemula */
+    text-align: left;
+}
+
+.perkembangan-bulu-tangkis > p,
+.bulu-tangkis-pemula > p {
+    color: rgb(80, 79, 79);
+}
+
+/* di sini juga ada css untuk memberikan style pada content dari dua bagian yaitu bagian 2 dan 4*/
+.regular,
+.advance,
+.perkembangan-bulu-tangkis,
+.bulu-tangkis-pemula {
+    width: calc(100% / 2);
+    height: 100%;
 }

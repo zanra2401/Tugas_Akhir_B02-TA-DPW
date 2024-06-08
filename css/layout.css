@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* font dari google */
+    font-family: "Roboto", sans-serif;
+    /* overflow ini berfungsi untuk jika content melibihi dari element parentnya atau containernya 
+    element akan di sembunyikan dan tidak bisa di scroll */
+    overflow-x: hidden;
+}
+
+/* bagian header */
+.header {
+    /* memiliki panjang 100% dari parent nya */
+    width: 100%;
+    /* display flex */
+    display: flex;
+    /* justify content karena flex direction default adalah row maka justify
+    content space between memberi jarak antara content secara horizontal */
+    justify-content: space-between;
+    /* alig items karena flex direction default adalah row maka align
+    items center membuat ke tengah content secara vertical */
+    align-items: center;
+    height: 80px;
+    background-color: #7432f9;
+    /* position fixed ini berfungsi agar element berada pada tempat yang tetap walapun layar di scroll */
+    position: fixed;
+    /* top ini berfungsi untuk jarak antara atas layar dengan element di sini 0 berati tak berjarak
+    top ini hanya berfungsi untuk beberapa position */
+    top: 0;
+}
+
+.header > a {
+    margin-right: 30px;
+}
+
+.logo-name > h3 {
+    margin-left: 20px;
+    color: white;
+    /* ini berfungsi untuk memberikan spasi antar huruf */
+    letter-spacing: 1px;
+}
+
+.menu,
+.content,
+.footer {
+    /* fungsi calc pada css untuk menghitung, contoh 
+    elemen memiliki panjang 100% seperti tetapi di kurangi 300px */
+    width: calc(100% - 300px);
+    margin-left: 300px;
+}
+
+.menu {
+    height: 35px;
+    padding: 5px;
+    font-weight: 900;
+    color: rgb(27, 27, 27);
+    background-color: white;
+     /* position fixed ini berfungsi agar element berada pada tempat yang tetap walapun layar di scroll */
+    position: fixed;
+    position: fixed;
+    /* top ini berfungsi untuk jarak antara atas layar dengan element di sini 80px berati berjarak 80px dari atas
+    top ini hanya berfungsi untuk beberapa position */
+    top: 80px;
+}
+
+.menu-list {
+    /* list style none unutuk menyebunyikan tanda list */
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    margin-right: 10px;
+    /* justify flex end berfungsi afar content berada pada akhir element secara vertical jika flex row */
+    justify-content: flex-end;
+    /* memiliki tinggi 100% dari parent nya */
+    height: 100%;
+}
+
+
+/* .menu-list > li ini adalah menu menu nya */
+.menu-list > li {
+    margin-left: 10px;
+}
+
+/* ini adalah hyperlink dari menu */
+.menu-list > li > a {
+    text-decoration: none;
+    color: rgb(43, 42, 42);
+    padding: 5px;
+    font-weight: 400;
+}
+
+.menu-list > li > a:hover {
+    /* ketika menu di hover maka akan memiliki border garis bawah dengan ketebalan 2px dan warna biru  */
+    border-bottom: 2px solid blue;
+    color: rgb(41, 27, 241);
+    cursor: pointer;
+}
+
+
+.sidebar {
+    /* calc di height ini sama seperti calc di width di atas bedanya ini mengatur tinggi */
+    height: calc(100vh - 80px);
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    /* position fixed ini berfungsi agar element berada pada tempat yang tetap walapun layar di scroll */
+    position: fixed;
+     /* top ini berfungsi untuk jarak antara atas layar dengan element di sini 80px berati berjarak 80px dari atas
+    top ini hanya berfungsi untuk beberapa position */
+    top: 80px;
+    /* box sizing border box berfungsi agar element memiliki ukurang yang fix seperti yang di tetapkan 300px, tidak berubah jika di kasih padding */
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 0.5px solid gray;
+}
+
+/* untuk faq container */
+.faq {
+    /* panjang 100% */
+    width: 100%;
+    box-sizing: border-box;
+    /* tinggi menyesuaikan isi content */
+    height: fit-content;
+    /* kelengkungan pojok */
+    border-radius: 2px;
+    border: 0.5px solid rgb(219, 217, 217);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.question {
+    /* border bawah 1px */
+    border-bottom: 1px solid rgb(120, 117, 117);
+    padding: 10px;
+    /* ketebalan font */
+    font-weight: 600;
+}
+
+.answer {
+    padding: 10px;
+    color: rgb(47, 46, 46);
+}
+
+/* style untuk container content  */
+.content {
+    /* tinggi menyesuaikan isi content  */
+    height: fit-content;
+    /* namun memiliki tinggi minimal yaitu tinggi layar browser di kurangi tinggi header dan menu 95px  */
+    min-height: calc(100vh - 95px);
+    margin-top: 125px;
+    background-color: #ffffff;
+}
+
+/* style untuk footer container */
+.footer {
+    height: 300px;
+    background-color: rgb(7, 8, 34);
+    background-color: #f8f9fa;
+    display: flex;
+    /* box sizing border box berfungsi agar element memiliki ukurang yang fix seperti yang di tetapkan 300px, tidak berubah jika di kasih padding */
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 20px;
+}
+
+.logo-header {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.logo-name {
+    display: flex;
+}
+
+.minnerlist {
+    margin: 20px;
+    text-decoration: none;
+    width: 90%;
+}
+
+.innerside {
+    margin: 10px;
+    text-align: center;
+    color: black;
+    width: 90%;
+}
+
+.line1 {
+    border: 0px;
+    height: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 140px;
+    width: 100%;
+}
+
+.circle {
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+}
+
+.icon {
+    width: 50%;
+    height: 50%;
+}
