@@ -1,29 +1,37 @@
 <!doctype html>
 <html lang="id">
     <head>
-     <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Form Bimbingan</title>
-        <link rel="stylesheet" type="text/css" href="css/sidebar.css">
-        <link rel="stylesheet" href="css/register.css">
+        <!-- mengambil font dari google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <linkvhref="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- mengambil css dengan relative path -->
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" href="css/form.css">
     </head>
     <body>
+        <!-- Bagian HEAFER -->
         <div class="header">
             <div class="logo-name">
-                <img class="logo-header" src="asset/badminton.svg" alt="" />
+                <img class="logo-header" src="asset/badminton.svg" alt="logo">
                 <h3>Victory Badminton</h3>
             </div>
         </div>
+        <!-- Bagian SIDEBAR -->
         <div class="sidebar">
-            <div class="faq">
+            <!-- di dalam didebar berisi faq atau frequent ask question -->
+            <!-- dan di dalam setiap faq berisi question dan answer -->
+            <div class="faq"> 
+                <!-- faq berfungsi untuk menapung pertanyaan dan jawaban di beri kelas faq semua agar memiliki style yang selaras untuk semua faq-->
                 <div class="question">
+                    <!-- question berfungsi untuk di isi pertanyaan -->
                     Apakah pembayaran bisa di kembalikan saat pelatih tidak
                     profesional?
                 </div>
+                <!-- answer berfungsi untuk di isi jawaban -->
                 <div class="answer">Tentu saja</div>
             </div>
             <div class="faq">
@@ -34,118 +42,112 @@
                 </div>
             </div>
             <div class="faq">
-                <div class="question">Bagaimana cara mendapatkan bimbingan private?</div>
+                <div class="question">Bagaimana cara mendapatkan bimbingan badminton private?</div>
                 <div class="answer">
                     Masuk link pada halaman depan web, kemudian isi form yang
                     tersedia.
                 </div>
             </div>
         </div>
+        <!-- Bagian MENU -->
         <div class="menu">
+            <!-- MENU berisi unordered list yang menampung list menu atau tautan ke halaman lain yang berkaitan dengan website -->
             <ul class="menu-list">
+                <!-- menggunakan ul karena list ini tidak perlu terurut -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="evaluation.html">Evaluation</a></li>
                 <li><a href="about-us.html">About Us</a></li>
             </ul>
         </div>
+        <!-- Bagian CONTENT -->
         <div class="content">
-            <form action="" class="registrasi-form" onsubmit="onSubmit()">
-                <input
-                    type="text"
-                    id="nama"
-                    placeholder="Nama"
-                    class="input-box"
-                />
+            <!-- di dalam content berisi form untuk memesan bimbingan private -->
+            <!-- form ini saat di submit akan menjalankan fungsi onSubmit() yang ada pada javascript -->
+            <form action="index.html" class="registrasi-form" onsubmit="onSubmit()">
+                <!-- di setiap input memiliki element div untuk menampung pesan error jika ada -->
+                <!-- pertama input untuk nama bertype text  -->
+                <input type="text" id="nama" placeholder="Nama" class="input-box" >
                 <div class="pesan-err" id="err-nama"></div>
-                <input
-                    type="text"
-                    placeholder="Email"
-                    id="email"
-                    class="input-box"
-                />
-                <input
-                    type="text"
-                    placeholder="Nomer Ponsel"
-                    id="nomer-handphone"
-                    class="input-box"
-                />
+                <!-- input email yang bertipe email  -->
+                <input type="text" placeholder="Email" id="email" class="input-box">
+                <div class="pesan-err" id="err-email"></div>
+                <input type="text" placeholder="Nomer Ponsel" id="nomer-handphone" class="input-box">
                 <div class="pesan-err" id="err-nomer"></div>
+                <!-- di sini ada div untuk menampung dua input bertipe radio untuk memilih kelas ini dilakukan
+                     agar desainya konsisten -->
                 <div class="kelas input-box">
                     <div class="kelas-label label">Kelas</div>
                     <div class="regular">
                         <label for="regular">Regular</label>
-                        <input type="radio" name="kelas" id="regular" />
+                        <input type="radio" name="kelas" id="regular">
                     </div>
                     <div class="advance">
                         <label for="advance">Advance</label>
-                        <input type="radio" name="kelas" id="advance" />
+                        <input type="radio" name="kelas" id="advance">
                     </div>
                 </div>
                 <div class="pesan-err" id="err-kelas"></div>
+                <!-- lalu sama seperti pemilihan kelas jadwal ditampung dalam sebuah div agar desain nya konsisten  -->
                 <div class="input-box jadwal">
+                    <!-- jadwal bertype date -->
                     <div class="jadwal-label label">Jadwal</div>
-                    <input type="date" id="jadwal" />
+                    <input type="date" id="jadwal">
                 </div>
                 <div class="pesan-err" id="jadwal-err"></div>
+                <!-- mentor sama seperti jadwal dan kelas -->
                 <div class="input-box mentor">
+                    <!-- menggunakan dropdown select karena kita hanya membutuhkan pilihan fix dan tidak terlalu banyak -->
                     <div class="mentor-label label">Mentor</div>
                     <select id="mentor">
                         <option value="mentor-1">mentor</option>
                     </select>
                 </div>
-                <textarea
-                    name="alamat"
-                    id="alamat"
-                    placeholder="Alamat"
-                ></textarea>
+                <!-- lalu alamat merupakan textarea -->
+                <textarea name="alamat" id="alamat" placeholder="Alamat"></textarea>
                 <div class="pesan-err" id="err-alamat"></div>
+                <!-- lalu pernyataan juga di tampung di div yang setiap pernyataan menampung satu inputan checkbox -->
                 <div class="input-box pernyataan">
-                    <input
-                        type="checkbox"
-                        class="pernyataan-check"
-                        id="pernyataan1"
-                    />
-                    <label for="pernyataan1"
-                        >setuju untuk membagikan informasi ini dengan
-                        kami</label
-                    >
+                    <input type="checkbox" class="pernyataan-check" id="pernyataan1">
+                    <label for="pernyataan1">
+                        setuju untuk membagikan informasi ini dengan
+                        kami
+                    </label>
                 </div>
                 <div class="input-box pernyataan">
-                    <input
-                        type="checkbox"
-                        class="pernyataan-check"
-                        id="pernyataan2"
-                    />
-                    <label for="pernyataan2"
-                        >setuju untuk mematuhi peraturan kami</label
-                    >
+                    <input type="checkbox" class="pernyataan-check" id="pernyataan2">
+                    <label for="pernyataan2">
+                        setuju untuk mematuhi peraturan kami
+                    </label>
                 </div>
                 <div class="pesan-err" id="err-pernyataan"></div>
-                <input type="submit" id="submit" />
+                <!-- terhakhit element input bertipe submit untuk mensubmit form -->
+                <input type="submit" id="submit">
             </form>
         </div>
+        <!-- Bagian FOOTER -->
         <div class="footer">
-             <div class="innerside">
-                    <div class="icontainer">
-                        <div class="circle">
-                            <a href="https://www.facebook.com/miyura.miyura.372">
-                                <img class="icon" src="asset/fb.png" alt="fb-icon">
-                            </a>
-                        </div>
-                        <div class="circle">
-                            <a href="https://instagram.com/restorika.resto?igshid=MzRlODBiNWFlZA==">
-                                <img class="icon" src="asset/ig-icon.png" alt="ig-icon">
-                            </a>
-                        </div>
-                        <div class="circle">
-                            <a href="https://twitter.com/You38059263">
-                                <img class="icon" src="asset/Twitter.png" alt="tt-icon">
-                            </a>
-                        </div><br>
+            <div class="innerside">
+                <div class="icontainer">
+                    <div class="circle">
+                        <a href="https://www.facebook.com/miyura.miyura.372">
+                            <img class="icon" src="asset/fb.png" alt="fb-icon">
+                        </a>
                     </div>
-                    <p>Contact: 085731788379<br>Alamat kantor: Jl.madura,Kab.Bangkalan</p>
-                    <div>Copyright 2024 victory badminton</div>
+                    <div class="circle">
+                        <a href="https://instagram.com/restorika.resto?igshid=MzRlODBiNWFlZA==">
+                            <img class="icon" src="asset/ig-icon.png" alt="ig-icon">
+                        </a>
+                    </div>
+                    <div class="circle">
+                        <a href="https://twitter.com/You38059263">
+                            <img class="icon" src="asset/x.png" alt="tt-icon">
+                        </a>
+                    </div><br>
+                </div>
+                <p>Contact: 085731788379<br>Alamat kantor: Jl.madura,Kab.Bangkalan</p>
+                <div>Copyright 2024 victory badminton</div>
+            </div>
+            <script src="js/validasi.js"></script>
         </div>
-        <script src="js/validasi.js"></script>
     </body>
 </html>
