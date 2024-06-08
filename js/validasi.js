@@ -12,6 +12,8 @@ const nomerErr = document.getElementById("err-nomer");
 const alamatErr = document.getElementById("err-alamat");
 const errKelas = document.getElementById("err-kelas");
 const errPernyataan = document.getElementById("err-pernyataan");
+const errEmail = document.getElementById("err-email")
+
 
 // fungsi untuk validasi alphabet
 function isAlphabet(inputValue) {
@@ -29,7 +31,21 @@ function isAlphabet(inputValue) {
   return false;
 }
 
-// fungsi untuk memvalidasi nome handphone
+// fungsi ini untuk memvaidasi email
+function isValidEmail(inputValue) {
+  // regex ini berfungsi untuk mengecek semua inputValue dari awal sampai akhir jika sebelum @ ditemukan
+  // character selain yang ada dalam kurung siku maka akan salah 
+  // jika setelah @ bukan gmail.com maka akan salah 
+  // jika salah akan mengembalikan false
+  regex = /^[a-z0-9.]+@gmail.com$/g
+  if (regex.test(inputValue)) {
+    return true
+  }
+
+  return false
+}
+
+// fungsi untuk memvalidasi nomer handphone
 function isNumeric(inputValue) {
   let regex = /^08[0-9]+$/g;
   if (regex.test(inputValue.trim())) {
@@ -74,7 +90,7 @@ function isValidJadwal(jadwalLes) {
   // megambil tanggal/detik jadwal yang di tentukan menggunakan parameter yang berasal dari tanggal yang di masukan user
   const jadwal = new Date(jadwalLes);
 
-  // karena objek ambil waktu milidetik menggunakan getTime get time ini mengembalikan milidetik yang berlalu sejak
+  // untuk mengambil waktu milidetik menggunakan getTime get time ini mengembalikan milidetik yang berlalu sejak
   // 1 january 1970 atau unix epoch dan ketika kita menggurangi dari sautu date.getTime() ke suatu date.getTime()
   // akan menghasilkan selisih milidetik
   let selisih = jadwal.getTime() - hariIni.getTime();
@@ -147,6 +163,18 @@ function onSubmit() {
       namaErr.innerHTML = "Nama hanya boleh mengandung alphabet atau spasi";
     } else {
       namaErr.innerHTML = "";
+    }
+  }
+
+  if (isEmpty(email.value)) {
+    event.preventDefault()
+    errEmail.innerHTML = "email wajib di isi"
+  }else {
+    if (!isValidEmail(email.value)) {
+      event.preventDefault()
+      errEmail.innerHTML = "tolong masukan gmail yang valid contoh email yang valid: nama@gmail.com"
+    } else {
+      errEmail.innerHTML = ""
     }
   }
 
