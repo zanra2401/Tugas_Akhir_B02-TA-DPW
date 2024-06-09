@@ -1,55 +1,60 @@
 <!doctype html>
-<html>
+<html lang="id">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>HOMEPAGE</title>
+        <title>About Us</title>
+        <!--Memanggil CSS didalam folder css-->
+        <!--penulisan link : relative path-->
         <link rel="stylesheet" type="text/css" href="css/layout.css">
         <link rel="stylesheet" href="css/style-about.css">
+        <!--Mengambil font dari google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <linkvhref="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <!--Header-->
         <div class="header">
             <div class="logo-name">
-                <img class="logo-header" src="asset/badminton.svg" alt="" />
+                <img class="logo-header" src="asset/badminton.svg" alt="">
                 <h3>Victory Badminton</h3>
             </div>
         </div>
         <!--Sidebar-->
         <div class="sidebar">
-            <!-- di dalam didebar berisi faq atau frequent ask question -->
+             <!-- di dalam didebar berisi faq atau frequent ask question -->
             <!-- dan di dalam setiap faq berisi question dan answer -->
-            <div class="faq"> 
-                <!-- faq berfungsi untuk menapung pertanyaan dan jawaban di beri kelas faq semua agar memiliki style yang selaras untuk semua faq-->
-                <p class="question">
+            <div class="faq">
+                 <!-- faq berfungsi untuk menapung pertanyaan dan jawaban di beri kelas faq semua agar memiliki style yang selaras untuk semua faq-->
+                <div class="question">
                     <!-- question berfungsi untuk di isi pertanyaan -->
                     Apakah pembayaran bisa di kembalikan saat pelatih tidak
                     profesional?
-                </p>
+                </div>
                 <!-- answer berfungsi untuk di isi jawaban -->
-                <p class="answer">Tentu saja</p>
+                <div class="answer">Tentu saja</div>
             </div>
             <div class="faq">
-                <p class="question">Kelas mana yang cocok untuk pemula?</p>
-                <p class="answer">
+                <div class="question">Kelas mana yang cocok untuk pemula?</div>
+                <div class="answer">
                     Kelas reguler sangat cocok untuk anda yang baru memulai
                     belajar badminton.
-                </p>
+                </div>
             </div>
             <div class="faq">
-                <p class="question">Bagaimana cara mendapatkan bimbingan badminton private?</p>
-                <p class="answer">
+                <div class="question">Bagaimana cara mengikuti kursus?</div>
+                <div class="answer">
                     Masuk link pada halaman depan web, kemudian isi form yang
                     tersedia.
-                </p>
+                </div>
             </div>
         </div>
         <!--Menu-->
+        <!-- MENU berisi unordered list yang menampung list menu atau tautan ke halaman lain yang berkaitan dengan website -->
         <div class="menu">
             <ul class="menu-list">
+                <!-- menggunakan ul karena list ini tidak perlu terurut -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="evaluation.html">Evaluation</a></li>
                 <li><a href="about-us.html">About Us</a></li>
@@ -57,19 +62,23 @@
         </div>
         <!--Content-->
         <div class="content">
+             <!-- didalam content berisi 3 bagian: -->
             <div class="about-us">
+                <!--bagian pertama berisi deskripsi nama mata kuliah, kelas, nama kelompok dan identitas kelompok -->
                 <div class="judul">
                     <h1>Dasar Pemrograman Web</h1>
-                    <h2>Kelas 2B</h2>
+                    <h2>Kelas IF 2B</h2>
                     <h2>Kelompok DPW2023-2-B02</h2>
                     <h2>Identitas Mahasiswa :</h2>
                     <ol>
-                        <h4><li>Wahyu ifandi (220411100187)</li></h4>
-                        <h4><li>Zanuar Rikza Aditiya(230411100087)</li></h4>
-                        <h4><li>Nabiilah Rizqi Amalia (230411100092)</li></h4>
-                        <h4><li>Riefqi Dwi Kurniawan (230411100108)</li></h4>
+                        <li><h4>Wahyu ifandi (220411100187)</h4></li>
+                        <li><h4>Zanuar Rikza Aditiya(230411100087)</h4></li>
+                        <li><h4>Nabiilah Rizqi Amalia (230411100092)</h4></li>
+                        <li><h4>Riefqi Dwi Kurniawan (230411100108)</h4></li>
                     </ol>
                 </div>
+                <!--Tabel-->
+                <!--bagian 2, tabel yang berisi identitas mahasiswa dan penugasan-->
                 <table>
                     <tr>
                         <th>No</th>
@@ -82,18 +91,24 @@
                         <td>Wahyu ifandi</td>
                         <td>220411100187</td>
                         <td>
+                            <!--menggunakan ordered list untuk list penugasan-->
                             <ol>
-                                <li>Membuat halaman homepage (html)</li>
+                                <li>Membuat bagian footer</li>
+                                <li>Membuat bagian kelas & sejarah badminton pada homepage</li>
                             </ol>
                         </td>
                     </tr>
                     <tr>
                         <td>2.</td>
-                        <td>Zanuar TwitterRikza Aditiya</td>
+                        <td>Zanuar Rikza Aditiya</td>
                         <td>230411100087</td>
                         <td>
+                            <!--menggunakan ordered list untuk list penugasan-->
                             <ol>
-                                <li>Membuat halaman form(html,Javascript)</li>
+                                <li>Membuat layout halaman web</li>
+                                <li>Membuat bagian-1 homepage</li>
+                                <li>Membuat halaman form</li>
+                                <li>Membuat validasi javascript  jadwal dan email</li>
                             </ol>
                         </td>
                     </tr>
@@ -102,8 +117,11 @@
                         <td>Nabiilah Rizqi Amalia</td>
                         <td>230411100092</td>
                         <td>
+                            <!--menggunakan ordered list untuk list penugasan-->
                             <ol>
-                                <li>Membuat halaman about us(html,CSS)</li>
+                                <li>Mengedit isi bagian sidebar, dan mentor pada homepage </li>
+                                <li>Membuat halaman about us</li>
+                                <li>Membuat javascript radio button, checkbox, dan nama</li>
                             </ol>
                         </td>
                     </tr>
@@ -112,16 +130,20 @@
                         <td>Riefqi Dwi Kurniawan</td>
                         <td>230411100108</td>
                         <td>
+                            <!--menggunakan ordered list untuk list penugasan-->
                             <ol>
-                                <li>Membuat halaman evaluation (html,CSS)</li>
+                                <li>Membuat halaman evaluation</li>
+                                <li>Membuat validasi javascript nomor ponsel, pelatih dan alamat</li>
                             </ol>
                         </td>
                     </tr>
                 </table>
-                        <!--Link Gambar-->
+                <!--sumber link-->
+                <!--bagian 3 berisi sumber link dan referensi web yang dibuat-->
                 <div class="link">
-                    <h3>Sumber Gambar : </h3>
+                    <h3>Sumber Referensi & Gambar : </h3>
                     <hr>
+                    <!--menggunakan unordered list-->
                     <ul>
                         <li><a href="https://www.pexels.com/id-id/foto/pria-laki-laki-lelaki-muda-11901860/">https://www.pexels.com/id-id/foto/pria-laki-laki-lelaki-muda-11901860/</a></li>
                         <li><a href="https://www.pexels.com/id-id/foto/wanita-dengan-blazer-lengan-panjang-ungu-berdiri-di-trotoar-abu-abu-3522693/">https://www.pexels.com/id-id/foto/wanita-dengan-blazer-lengan-panjang-ungu-berdiri-di-trotoar-abu-abu-3522693/</a></li>
@@ -132,9 +154,10 @@
                         <li><a href="https://www.pexels.com/id-id/foto/pria-dengan-t-shirt-yellow-crew-neck-dan-jeans-denim-biru-duduk-di-lapangan-rumput-hijau-3760775/">https://www.pexels.com/id-id/foto/pria-dengan-t-shirt-yellow-crew-neck-dan-jeans-denim-biru-duduk-di-lapangan-rumput-hijau-3760775/</a></li>
                         <li><a href="https://www.pexels.com/id-id/foto/mahasiswa-pelajar-siswa-murid-6549582/">https://www.pexels.com/id-id/foto/mahasiswa-pelajar-siswa-murid-6549582/</a></li>
                         <li><a href="https://www.flaticon.com/free-icon/badminton_327028">https://www.flaticon.com/free-icon/badminton_327028</a></li>
+                        <li><a href="https://www.superprof.co.id/kursus/bulu-tangkis/indonesia/">https://www.superprof.co.id/kursus/bulu-tangkis/indonesia/</a></li>
+                        <li><a href="https://icon-icons.com/icon/twitter-x-new-logo-square-x/256075#google_vignette">https://icon-icons.com/icon/twitter-x-new-logo-square-x/256075#google_vignette</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
         <!--Footer-->
@@ -153,12 +176,12 @@
                     </div>
                     <div class="circle">
                         <a href="https://twitter.com/You38059263">
-                            <img class="icon" src="asset/x.png" alt="tt-icon">
+                            <img class="icon" src="asset/Twitter.png" alt="tt-icon">
                         </a>
                     </div><br>
                 </div>
                 <p>Contact: 085731788379<br>Alamat kantor: Jl.madura,Kab.Bangkalan</p>
-                <div>Copyright 2024 victory badminton</div>
+                <div>Copyright 2024 Victory badminton</div>
             </div>
         </div>
     </body>
