@@ -136,11 +136,13 @@ body {
     padding: 10px;
     /* ketebalan font */
     font-weight: 600;
+    margin: 0px;
 }
 
 .answer {
     padding: 10px;
     color: rgb(47, 46, 46);
+    margin: 0px;
 }
 
 /* style untuk container content  */

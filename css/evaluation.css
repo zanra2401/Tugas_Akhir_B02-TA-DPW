@@ -6,7 +6,6 @@
 }
 
 .evaluasi {
-    background-color: #f3dbc7;
     max-width: 1000 px;
     justify-content: center;
     align-items: center;
@@ -26,6 +25,11 @@ table {
     margin-bottom: 30px;
 }
 
+th {
+    background-color: #7432f9;
+    color: white;
+}
+
 table,
 th,
 td {
@@ -37,7 +41,6 @@ td {
 th {
     height: 60px;
     width: 200px;
-    background-color: #f9e6b2;
     color: 282828;
 }
 

@@ -14,18 +14,12 @@
   text-align: justify;
 	padding: 10px;
 	margin-bottom: 30px;
-	height: 500px;
-	color: #6AD4DD;
+	height: 400px;
+	color: white;
 	font-family: Geneva, sans-serif;
 	padding-left: 70px;
-	padding-top: 100px;
-}
-
-.judul{
-	background-image: url("../asset/px.jpg");
-	width: 100%;
-	background-size: cover;
-	background-position: center;
+	padding-top: 30px;
+	background: linear-gradient(to right, #8576FF, #1cb5e0);
 }
 
 ol {
@@ -45,15 +39,22 @@ table,th,td {
 th {
 	height: 60px;
 	width: 200px;
-	background-color: #006989;
+	background-color: #8576FF;
 	color: whitesmoke;
 }
 
-th:nth-child(1), td:nth-child(1) {
-	width: 5%; /* Menetapkan lebar kolom pertama menjadi 30% */
+/*mengatur lebar kolom pertama*/
+th:nth-child(1), td:nth-child(1) { 
+	width: 5%; 
 }
 
+/*mengatur text align & padding-left kolom 2 dan 4*/
 td:nth-child(2),td:nth-child(4){
 	text-align: left;
 	padding-left: 15px;
+}
+
+
+.link h3{
+	padding-left: 30px;
 }
