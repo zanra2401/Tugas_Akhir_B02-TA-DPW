@@ -27,6 +27,15 @@ function isEmpty(inputValue) {
   return false;
 }
 
+// fungsi untuk memvalidasi panjang digit karakter
+function lenInput(inputValue, min, max) {
+  if (inputValue.trim().length > max || inputValue.trim().length < min) {
+    return false;
+  }
+  return true;
+  
+}
+
 // fungsi untuk validasi alphabet
 function isAlphabet(inputValue) {
   // regex di bawah berfungsi untuk memvalidasi apakah inputan ada di antara a-z A-Z dan " " jika tidak salah satu dari
@@ -45,16 +54,23 @@ function isAlphabet(inputValue) {
 
 // fungsi ini untuk memvaidasi email
 function isValidEmail(inputValue) {
-  // regex ini berfungsi untuk mengecek semua inputValue dari awal sampai akhir jika sebelum @ ditemukan
-  // character selain yang ada dalam kurung siku maka akan salah 
-  // jika setelah @ bukan gmail.com maka akan salah 
-  // jika salah akan mengembalikan false
-  regex = /^[a-z0-9.]+@gmail.com$/g
-  if (regex.test(inputValue)) {
-    return true
+  let gmailArr = inputValue.split("@")
+  let alphaNumeric = /^[a-z|0-9|.]+$/g
+  let dotBerturutRegex = /^([a-z0-9]+\.?[a-z0-9]?)+$/g
+  let gmail = /^gmail.com$/g
+  console.log(gmailArr[0])
+  if (gmailArr.length != 2) {
+    return "gmail yang valid memiliki satu @"
+  } else if (!alphaNumeric.test(gmailArr[0])) {
+    return "gmail yang valid hanya mengandung (a-z atau 0-9 atau titik)"
+  } else if (!dotBerturutRegex.test(gmailArr[0])) {
+    return "tidak boleh memasukan titik berturut"
+  } else if (gmailArr[0].length < 6 || gmailArr[1].length  > 30) {
+    return "panjang nama gmail yang valid adalah 6 sampai 30 character"
+  } else if (!gmail.test(gmailArr[1])) {
+    return "email yang valid adalah gmail.com, contoh: userName@gmail.com"
   }
-
-  return false
+  return true
 }
 
 // fungsi untuk memvalidasi nomer handphone
@@ -66,14 +82,6 @@ function isNumeric(inputValue) {
   return false;
 }
 
-// fungsi untuk memvalidasi panjang digit karakter
-function lenInput(inputValue, min, max) {
-  if (inputValue.trim().length > max || inputValue.trim().length < min) {
-    return false;
-  }
-  return true;
-  
-}
 
 
 function isAlphaNumeric(inputValue) {
@@ -191,18 +199,10 @@ function onSubmit() {
     // lalu error di isi sebagai berikut
     errEmail.innerHTML = "email wajib di isi"
   }else {
-    // jika tidak kosong akan masuk ke sini
-    // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isValidEmail akan di negasikan
-    // jika isVAlidEmail mengembalikan true akan di menjadi false begitu pun sebaliknya
-    if (!isValidEmail(email.value)) {
-      // jika expressi di atas true maka akan masuk ke sini
-      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
-      event.preventDefault()
-      // lalu error di isi sebagai berikut
-      errEmail.innerHTML = "tolong masukan gmail yang valid contoh email yang valid: nama@gmail.com"
+    let isEmail = isValidEmail(email.value)
+    if (isEmail != true) {
+      errEmail.innerHTML = isEmail
     } else {
-      // jika selain di atas akan masuk ke sini
-      // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
       errEmail.innerHTML = ""
     }
   }
