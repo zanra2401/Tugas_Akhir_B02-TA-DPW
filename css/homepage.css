@@ -41,12 +41,12 @@
     /* word-spacing berfungsi untuk memberikan jarak antar kata di sini 1px */
     word-spacing: 1px;
     /* warna backround menjadi gradient dari warna #f8f9fa ke warna putih dari atas ke bawah*/
-    background-image: linear-gradient(to bottom, #f8f9fa, white); 
+    background-color: #F3F1F5; 
     align-items: center;
 }
 
 .quote-bagian-1 {
-    color: rgb(0, 0, 0);
+    color: #FA7070;
     font-weight: 900;
     width: 600px;
     margin-bottom: 5px;
@@ -57,7 +57,7 @@
     font-size: 16px;
     /* ketebalan font */
     font-weight: 600;
-    color: rgb(44, 44, 44);
+    color: #3532A7;
     margin-bottom: 20px;
 }
 
@@ -85,15 +85,15 @@
     background-color: rgb(140, 138, 222);
 }
 
-
-
-
-
 /* bagian ke dua atau bagian kelas */
-
 
 .kelas {
     list-style: none;
+    background-color: #CCC1FF;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 30px;
+    margin-top: 60px;
 }
 
 .sub-title-list {
@@ -102,18 +102,19 @@
 }
 
 .sub-title-list > h3 {
-    color: rgb(80, 79, 79);
+    color: #3D2C8D;
 }
 
 .sub-title-list > ul {
-    color: rgb(80, 79, 79);
+    color: #3D2C8D;
 }
 
 .title-list {
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
+    color: #3D2C8D;
+    text-align: center;
 }
-
 
 
 
@@ -121,6 +122,9 @@
 .bagian-3 {
     display: flex;
     align-items: center;
+    background-color: ghostwhite;
+    padding: 45px;
+    margin-top: 40px;
 }
 
 .mentor-container {
@@ -216,4 +220,9 @@
 .bulu-tangkis-pemula {
     width: calc(100% / 2);
     height: 100%;
+}
+
+
+.bagian-4{
+    margin-top: 50px;
 }
