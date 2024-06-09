@@ -43,7 +43,7 @@
     /* warna backround menjadi gradient dari warna #f8f9fa ke warna putih dari atas ke bawah*/
     backround-image: linear-gradient(to bottom, #F3F1F5, white);
     /*  background-color: #F3F1F5;  */
-    
+    backgorund-color: black;
     align-items: center;
 }
 
