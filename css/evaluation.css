@@ -1,17 +1,23 @@
 /* table evaluasi */
 .content {
+    /* display flex*/
     display: flex;
+    /*mengetur content agar ketengah secara horizontal karena flex default row*/
     justify-content: center;
     font-family: "Roboto", sans-serif;
 }
 
 .evaluasi {
-    max-width: 1000 px;
+    /*Panjang maksimal 1000px*/
+    max-width: 1000px;
+    /*mengetur content agar ketengah secara vertical karena flex column*/
     justify-content: center;
     align-items: center;
     margin: 20px auto;
     padding: 10 px;
+    /*agar border saling menimpa atau berdempetan*/
     border-collapse: collapse;
+    /*flex colum agar tersusun secara vetical*/
     flex-direction: column;
 }
 
