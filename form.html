@@ -26,27 +26,27 @@
             <!-- dan di dalam setiap faq berisi question dan answer -->
             <div class="faq"> 
                 <!-- faq berfungsi untuk menapung pertanyaan dan jawaban di beri kelas faq semua agar memiliki style yang selaras untuk semua faq-->
-                <div class="question">
+                <p class="question">
                     <!-- question berfungsi untuk di isi pertanyaan -->
                     Apakah pembayaran bisa di kembalikan saat pelatih tidak
                     profesional?
-                </div>
+                </p>
                 <!-- answer berfungsi untuk di isi jawaban -->
-                <div class="answer">Tentu saja</div>
+                <p class="answer">Tentu saja</p>
             </div>
             <div class="faq">
-                <div class="question">Kelas mana yang cocok untuk pemula?</div>
-                <div class="answer">
+                <p class="question">Kelas mana yang cocok untuk pemula?</p>
+                <p class="answer">
                     Kelas reguler sangat cocok untuk anda yang baru memulai
                     belajar badminton.
-                </div>
+                </p>
             </div>
             <div class="faq">
-                <div class="question">Bagaimana cara mendapatkan bimbingan badminton private?</div>
-                <div class="answer">
+                <p class="question">Bagaimana cara mendapatkan bimbingan badminton private?</p>
+                <p class="answer">
                     Masuk link pada halaman depan web, kemudian isi form yang
                     tersedia.
-                </div>
+                </p>
             </div>
         </div>
         <!-- Bagian MENU -->
@@ -63,14 +63,15 @@
         <div class="content">
             <!-- di dalam content berisi form untuk memesan bimbingan private -->
             <!-- form ini saat di submit akan menjalankan fungsi onSubmit() yang ada pada javascript -->
-            <form action="index.html" class="registrasi-form" onsubmit="onSubmit()">
+            <form action="index.html" class="registrasi-form" onsubmit="onSubmit()" onac>
                 <!-- di setiap input memiliki element div untuk menampung pesan error jika ada -->
                 <!-- pertama input untuk nama bertype text  -->
                 <input type="text" id="nama" placeholder="Nama" class="input-box" >
                 <div class="pesan-err" id="err-nama"></div>
                 <!-- input email yang bertipe email  -->
-                <input type="text" placeholder="Email" id="email" class="input-box">
+                <input type="text" placeholder="Gmail" id="email" class="input-box">
                 <div class="pesan-err" id="err-email"></div>
+                <!-- input nomer handphone bertype text -->
                 <input type="text" placeholder="Nomer Ponsel" id="nomer-handphone" class="input-box">
                 <div class="pesan-err" id="err-nomer"></div>
                 <!-- di sini ada div untuk menampung dua input bertipe radio untuk memilih kelas ini dilakukan
@@ -93,15 +94,24 @@
                     <div class="jadwal-label label">Jadwal</div>
                     <input type="date" id="jadwal">
                 </div>
-                <div class="pesan-err" id="jadwal-err"></div>
+                <div class="pesan-err" id="err-jadwal"></div>
                 <!-- mentor sama seperti jadwal dan kelas -->
                 <div class="input-box mentor">
                     <!-- menggunakan dropdown select karena kita hanya membutuhkan pilihan fix dan tidak terlalu banyak -->
-                    <div class="mentor-label label">Mentor</div>
+                    <div class="mentor-label label">Pelatih</div>
                     <select id="mentor">
-                        <option value="mentor-1">mentor</option>
+                        <option value="">Pilih Pelatih</option>
+                        <option value="christof">Christof</option>
+                        <option value="maria_lestari">Maria Lestari</option>
+                        <option value="tara_budiman">Tara Budiman</option>
+                        <option value="agus_wirawan">Agus Wirawan</option>
+                        <option value="indra_saputra">Indra Saputra</option>
+                        <option value="lestari_anindya">Lestari Anindya</option>
+                        <option value="dedi_prasetyo">Dedi Prasetyo</option>
+                        <option value="eka_gunawan">Eka Gunawan</option>
                     </select>
                 </div>
+                <div class="pesan-err" id="err-mentor"></div>
                 <!-- lalu alamat merupakan textarea -->
                 <textarea name="alamat" id="alamat" placeholder="Alamat"></textarea>
                 <div class="pesan-err" id="err-alamat"></div>
@@ -111,12 +121,6 @@
                     <label for="pernyataan1">
                         setuju untuk membagikan informasi ini dengan
                         kami
-                    </label>
-                </div>
-                <div class="input-box pernyataan">
-                    <input type="checkbox" class="pernyataan-check" id="pernyataan2">
-                    <label for="pernyataan2">
-                        setuju untuk mematuhi peraturan kami
                     </label>
                 </div>
                 <div class="pesan-err" id="err-pernyataan"></div>
