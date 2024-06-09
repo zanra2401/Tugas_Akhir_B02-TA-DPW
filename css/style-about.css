@@ -1,41 +1,39 @@
-.content {
-	display: flex;
-	justify-content: center;
-	font-family: "Roboto", sans-serif;
-}
-
 .about-us {
-	width: 100%;
+	width: 100%; /*lebar halaman 100% dari 1.219*/
 	display: flex;
-	flex-direction: column;
+  flex-direction: column; /*agar elemen didalam class about-us posisi nya vertikal dari atas ke bawah*/
 }
 
+/*Deskripsi*/
 .judul{
-  text-align: justify;
-	padding: 10px;
+	padding: 10px; /*padding konten .judul*/
 	margin-bottom: 30px;
 	height: 400px;
-	color: white;
+	color: white; /*warna font*/
 	font-family: Geneva, sans-serif;
 	padding-left: 70px;
 	padding-top: 30px;
-	background: linear-gradient(to right, #8576FF, #1cb5e0);
+	background: linear-gradient(to right, #8576FF, #1cb5e0); /*efek gradasi kiri ke kanan (kiri #8576FF, kanan #1cb5e0)*/
 }
 
 ol {
-	list-style-position: outside;
+	list-style-position: outside; /*posisi angka diluar konten list*/
 }
 
+/*Tabel*/
 table{
-	border-collapse: collapse;
+	border-collapse: collapse; /*menjadikan border hanya terlihat satu*/
+	margin-top: 35px;
 	margin-bottom: 30px;
 }
 
+/*mengatur element table, th, dan td*/
 table,th,td {
-	border: 1px solid #bbb;
+	border: 1px solid #bbb; /*lebar border 1px solid warna: abu-abu*/
 	text-align: center;
 }
 
+/*mengatur element th pada tabel*/
 th {
 	height: 60px;
 	width: 200px;
@@ -54,7 +52,13 @@ td:nth-child(2),td:nth-child(4){
 	padding-left: 15px;
 }
 
-
+/*mengatur padding ke kiri sebanyak 30px di class: link, element h3, "Sumber Referensi & Gambar : "*/
 .link h3{
-	padding-left: 30px;
+	padding-left: 15px;
+	margin-bottom: 0px;
+}
+
+.link {
+	margin-top: 30px;
+	margin-bottom: 70px;
 }
