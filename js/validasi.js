@@ -4,16 +4,28 @@ const nama = document.getElementById("nama");
 const email = document.getElementById("email");
 const nomerHandphone = document.getElementById("nomer-handphone");
 const alamat = document.getElementById("alamat");
+const mentor = document.getElementById("mentor");
 
 // memanggil element container untuk pesan error
-const jadwalErr = document.getElementById("jadwal-err");
-const namaErr = document.getElementById("err-nama");
-const nomerErr = document.getElementById("err-nomer");
-const alamatErr = document.getElementById("err-alamat");
+const errJadwal = document.getElementById("err-jadwal");
+const errNama = document.getElementById("err-nama");
+const errNomer = document.getElementById("err-nomer");
+const errAlamat = document.getElementById("err-alamat");
 const errKelas = document.getElementById("err-kelas");
 const errPernyataan = document.getElementById("err-pernyataan");
 const errEmail = document.getElementById("err-email")
+const errMentor = document.getElementById("err-mentor")
 
+// fungsi untuk mengecek apakah sebuah inputan kosong atau tidak
+function isEmpty(inputValue) {
+  if (inputValue.trim() == "") {
+    // jika input value sama dengan string kosong maka dapat di simpulkan bahwa input value adalah kosong
+    // jika kosong akan di kembalikan nilai boolean true
+    return true;
+  }
+  // jika tidak kosong akan di kembalikan nilai boolean false
+  return false;
+}
 
 // fungsi untuk validasi alphabet
 function isAlphabet(inputValue) {
@@ -56,22 +68,13 @@ function isNumeric(inputValue) {
 
 // fungsi untuk memvalidasi panjang digit karakter
 function lenInput(inputValue, min, max) {
-  if (inputValue.length.trim() > max || inputValue.length.trim() < min) {
+  if (inputValue.trim().length > max || inputValue.trim().length < min) {
     return false;
   }
   return true;
+  
 }
 
-// fungsi untuk mengecek apakah sebuah inputan kosong atau tidak
-function isEmpty(inputValue) {
-  if (inputValue.trim() == "") {
-    // jika input value sama dengan string kosong maka dapat di simpulkan bahwa input value adalah kosong
-    // jika kosong akan di kembalikan nilai boolean true
-    return true;
-  }
-  // jika tidak kosong akan di kembalikan nilai boolean false
-  return false;
-}
 
 function isAlphaNumeric(inputValue) {
   const regex = /^[a-zA-Z0-9 ,./]+$/;
@@ -85,20 +88,20 @@ function isAlphaNumeric(inputValue) {
 // a = /^[a-z0-9.]+@([a-zA-Z0-9_][a-zA-Z0-9_]+[a-zA-Z0-9_])+$/g;
 
 function isValidJadwal(jadwalLes) {
-  // mengambil tanggal/detik hari ini dengan menggunakan objek Date tanpa parameter untuk mengambil hari ini
+  // mengambil tanggal hari ini dengan menggunakan objek Date tanpa parameter untuk mengambil hari ini
   const hariIni = new Date();
-  // megambil tanggal/detik jadwal yang di tentukan menggunakan parameter yang berasal dari tanggal yang di masukan user
+  // megambil tanggal dari jadwal yang di tentukan menggunakan parameter yang berasal dari tanggal yang di masukan user
   const jadwal = new Date(jadwalLes);
 
   // untuk mengambil waktu milidetik menggunakan getTime get time ini mengembalikan milidetik yang berlalu sejak
   // 1 january 1970 atau unix epoch dan ketika kita menggurangi dari sautu date.getTime() ke suatu date.getTime()
-  // akan menghasilkan selisih milidetik
+  // akan menghasilkan selisih milidetik dapat kita gunakan untuk mencari selisih hari
   let selisih = jadwal.getTime() - hariIni.getTime();
 
-  // mengkonversi milidetik ke hari dengan cara membagi nya dengan berapa banyak milidetik pada satu hari
+  // mengkonversi selisih milidetik ke hari dengan cara membagi nya dengan berapa banyak milidetik pada satu hari
   // dan kita akan membulatkan ke atas agar suatu hari tidak di lewati sebelum hari itu benar benar di lewati
   // menggunakan Math.ceil()
-  let selisihHari = Math.ceil(selisih / (1000 * 60 * 60 * 24));
+  let selisihHari = Math.ceil(selisih / (1000 * 60 * 60 * 24)); 
 
   // minimal jadwal yang di pilih 1 hari setelah pemesanan
   // dan maksimal jadwal yang di pilih 7 hari setelah pemesanan
@@ -153,44 +156,83 @@ function isChecked() {
   }
 }
 
+
+// FUNGSI INI AKAN BERJALAN KETIKA FORM DI SUBMIT
 function onSubmit() {
+  // di fungsi ini menggunakan fungsi fungsi validasi yang telah dibuat di atas
+  // pengecekan nama 
   if (isEmpty(nama.value)) {
+    // pertama di cek menggunakan fungsi isEmpty nama jika true maka akan masuk ke sini dan 
+    // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault();
-    namaErr.innerHTML = "Nama wajib di isi";
+    // lalu error di isi sebagai berikut
+    errNama.innerHTML = "Nama wajib di isi";
   } else {
+    // jika tidak kosong akan masuk ke sini
+    // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isAlphabet akan di negasikan
+    // jika isAlphabet mengembalikan true akan di menjadi false begitu pun sebaliknya
     if (!isAlphabet(nama.value)) {
+      // jika expressi di atas true maka akan masuk ke sini
+      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault();
-      namaErr.innerHTML = "Nama hanya boleh mengandung alphabet atau spasi";
+      // lalu error di isi sebagai berikut
+      errNama.innerHTML = "Nama hanya boleh mengandung alphabet atau spasi";
     } else {
-      namaErr.innerHTML = "";
+      // jika selain di ats akan masuk ke sini
+      // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
+      errNama.innerHTML = "";
     }
   }
 
   if (isEmpty(email.value)) {
+    // di cek menggunakan fungsi isEmpty email jika true maka akan masuk ke sini dan 
+    // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault()
+    // lalu error di isi sebagai berikut
     errEmail.innerHTML = "email wajib di isi"
   }else {
+    // jika tidak kosong akan masuk ke sini
+    // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isValidEmail akan di negasikan
+    // jika isVAlidEmail mengembalikan true akan di menjadi false begitu pun sebaliknya
     if (!isValidEmail(email.value)) {
+      // jika expressi di atas true maka akan masuk ke sini
+      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault()
+      // lalu error di isi sebagai berikut
       errEmail.innerHTML = "tolong masukan gmail yang valid contoh email yang valid: nama@gmail.com"
     } else {
+      // jika selain di atas akan masuk ke sini
+      // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
       errEmail.innerHTML = ""
     }
   }
 
   if (isEmpty(nomerHandphone.value)) {
+    // di cek menggunakan fungsi isEmpty nomerHandphone jika true maka akan masuk ke sini dan 
+    // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault();
-    nomerErr.innerHTML = "nomer handphone wajib di isi";
+    // lalu error di isi sebagai berikut
+    errNomer.innerHTML = "nomer handphone wajib di isi";
   } else {
+    // jika tidak kosong akan masuk ke sini
+    // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isNumeric akan di negasikan
+    // jika isNumeric mengembalikan true akan di menjadi false begitu pun sebaliknya
     if (!isNumeric(nomerHandphone.value)) {
+      // jika expressi di atas true maka akan masuk ke sini
+      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault();
-      nomerErr.innerHTML = "Nomer handphone tidak valid";
+       // lalu error di isi sebagai berikut
+      errNomer.innerHTML = "Nomer handphone tidak valid";
     } else if (!lenInput(nomerHandphone.value, 10, 13)) {
+      // jika expressi di atas true maka akan masuk ke sini
+      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault();
-      nomerErr.innerHTML =
-        "Panjang nomer handphone hanya boleh di antara 10 sampai 13";
+      // lalu error di isi sebagai berikut
+      errNomer.innerHTML = "Panjang nomer handphone hanya valid di antara 10 sampai 13";
     } else {
-      nomerErr.innerHTML = "";
+      // jika selain di atas akan masuk ke sini
+      // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
+      errNomer.innerHTML = "";
     }
   }
 
@@ -198,35 +240,70 @@ function onSubmit() {
     event.preventDefault();
   }
 
+  
   if (isEmpty(jadwal.value)) {
+    // di cek menggunakan fungsi isEmpty jadwal jika true maka akan masuk ke sini dan 
+    // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault();
-    jadwalErr.innerHTML = "Jadwal wajib di isi";
+    // lalu error di isi sebagai berikut
+    errJadwal.innerHTML = "Jadwal wajib di isi";
   } else {
+    // jika tidak kosong akan masuk ke sini
+    // di cek apakah isValidJadwal mengebalikan true
     if (isValidJadwal(jadwalLes.value) != true) {
+      // jika expressi di atas true maka akan masuk ke sini
+      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault();
-      jadwalErr.innerHTML = isValidJadwal(jadwalLes.value);
+      // lalu error di isi sebagai berikut
+      // di sini di isi dengan fungsi nya karen jika isValidJadwal bukan mengembalikan true isValidJadwal mengebalikan pesan error
+      errJadwal.innerHTML = isValidJadwal(jadwalLes.value);
     } else {
-      jadwalErr.innerHTML = "";
+      // jika selain di atas masuk ke sini
+      // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
+      errJadwal.innerHTML = "";
     }
   }
 
-  if (isEmpty(alamat.value)) {
-    event.preventDefault();
-    alamatErr.innerHTML = "alamat wajib di isi";
+  if (isEmpty(mentor.value)) {
+    errMentor.innerHTML = "Pilih pelatih yang tersedia terlebih dahulu"
   } else {
+    errMentor.innerHTML = ""
+  }
+
+  if (isEmpty(alamat.value)) {
+    // di cek menggunakan fungsi isEmpty alamat jika true maka akan masuk ke sini dan 
+    // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
+    event.preventDefault();
+    // lalu error di isi sebagai berikut
+    errAlamat.innerHTML = "alamat wajib di isi";
+  } else {
+    // jika tidak kosong akan masuk ke sini
+    // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isValidEmail akan di negasikan
+    // jika isAlphaNumerix mengembalikan true akan di menjadi false begitu pun sebaliknya
     if (!isAlphaNumeric(alamat.value)) {
+      // jika expressi di atas true maka akan masuk ke sini
+      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault();
-      alamatErr.innerHTML =
+      // lalu error di isi sebagai berikut
+      errAlamat.innerHTML =
         "Alamat hanya boleh alfanumeric koma slash dan titik";
     } else if (!lenInput(alamat.value, 0, 500)) {
+      // jika expressi di atas true maka akan masuk ke sini
+      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault();
-      alamatErr.innerHTML = "panjang maksimal alamat adalah 500 character";
+      // lalu error di isi sebagai berikut
+      errAlamat.innerHTML = "panjang maksimal alamat adalah 500 character";
     } else {
-      alamat.innerHTML = "";
+      // jika selain di atas akan masuk ke sini
+      // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
+      errAlamat.innerHTML = "";
     }
   }
 
   if (!isChecked()) {
     event.preventDefault();
   }
+
+  
+  
 }
