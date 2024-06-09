@@ -46,7 +46,7 @@
 }
 
 .quote-bagian-1 {
-    color: #FA7070;
+    color: black;
     font-weight: 900;
     width: 600px;
     margin-bottom: 5px;
@@ -57,7 +57,7 @@
     font-size: 16px;
     /* ketebalan font */
     font-weight: 600;
-    color: #3532A7;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -89,7 +89,7 @@
 
 .kelas {
     list-style: none;
-    background-color: #CCC1FF;
+    background-color: #F3F1F5;
     padding: 20px;
     border-radius: 15px;
     margin: 30px;
@@ -102,17 +102,17 @@
 }
 
 .sub-title-list > h3 {
-    color: #3D2C8D;
+    color: black;
 }
 
 .sub-title-list > ul {
-    color: #3D2C8D;
+    color: black;
 }
 
 .title-list {
     margin-bottom: 50px;
     margin-top: 30px;
-    color: #3D2C8D;
+    color: black;
     text-align: center;
 }
 
