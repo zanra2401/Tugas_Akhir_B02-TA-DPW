@@ -4,24 +4,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About Us</title>
-        <!--Memanggil CSS didalam folder css-->
-        <!--penulisan link : relative path-->
-        <link rel="stylesheet" type="text/css" href="css/layout.css">
-        <link rel="stylesheet" href="css/style-about.css">
-        <!--Mengambil font dari google font-->
+        <!-- mengambil font dari google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- mengambil css dengan relative path -->
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" href="css/form.css">
     </head>
     <body>
-        <!--Header-->
+        <!--Bagian HEADER-->
         <div class="header">
             <div class="logo-name">
                 <img class="logo-header" src="asset/badminton.svg" alt="">
                 <h3>Victory Badminton</h3>
             </div>
         </div>
-        <!--Sidebar-->
+        <!--Bagian SIDEBAR-->
         <div class="sidebar">
              <!-- di dalam didebar berisi faq atau frequent ask question -->
             <!-- dan di dalam setiap faq berisi question dan answer -->
@@ -50,9 +49,9 @@
                 </div>
             </div>
         </div>
-        <!--Menu-->
-        <!-- MENU berisi unordered list yang menampung list menu atau tautan ke halaman lain yang berkaitan dengan website -->
+        <!--Bagian MENU-->
         <div class="menu">
+            <!-- MENU berisi unordered list yang menampung list menu atau tautan ke halaman lain yang berkaitan dengan website -->
             <ul class="menu-list">
                 <!-- menggunakan ul karena list ini tidak perlu terurut -->
                 <li><a href="index.html">Home</a></li>
@@ -62,48 +61,50 @@
         </div>
         <!--Content-->
         <div class="content">
-             <!-- didalam content berisi 3 bagian: -->
+        <!--div dengan class content menampung isi dari class about-us-->
             <div class="about-us">
-                <!--bagian pertama berisi deskripsi nama mata kuliah, kelas, nama kelompok dan identitas kelompok -->
+                <!--div dengan class about-us berisi 3 bagian: judul, tabel, link-->
                 <div class="judul">
-                    <h1>Dasar Pemrograman Web</h1>
-                    <h2>Kelas IF 2B</h2>
-                    <h2>Kelompok DPW2023-2-B02</h2>
-                    <h2>Identitas Mahasiswa :</h2>
+                <!--div dengan class judul berisi deskripsi nama mata kuliah, kelas, nama kelompok dan identitas kelompok -->
+                    <h1>Dasar Pemrograman Web</h1><!--sebagai judul menggunakan h1-->
+                    <h2>Kelas IF 2B</h2><!--sebagai subjudul menggunakan h2-->
+                    <h2>Kelompok DPW2023-2-B02</h2><!--sebagai subjudul menggunakan h2-->
+                    <h2>Identitas Mahasiswa :</h2><!--sebagai subjudul menggunakan h2-->
+                    <!--menggunakan ordered list 1-4-->
                     <ol>
-                        <li><h4>Wahyu ifandi (220411100187)</h4></li>
-                        <li><h4>Zanuar Rikza Aditiya(230411100087)</h4></li>
-                        <li><h4>Nabiilah Rizqi Amalia (230411100092)</h4></li>
-                        <li><h4>Riefqi Dwi Kurniawan (230411100108)</h4></li>
+                        <li><h4>Wahyu ifandi (220411100187)</h4></li><!-- menggunakan ordered list ditambah dengan h4-->
+                        <li><h4>Zanuar Rikza Aditiya(230411100087)</h4></li><!-- menggunakan ordered list ditambah dengan h4-->
+                        <li><h4>Nabiilah Rizqi Amalia (230411100092)</h4></li><!-- menggunakan ordered list ditambah dengan h4-->
+                        <li><h4>Riefqi Dwi Kurniawan (230411100108)</h4></li><!-- menggunakan ordered list ditambah dengan h4-->
                     </ol>
                 </div>
                 <!--Tabel-->
                 <!--bagian 2, tabel yang berisi identitas mahasiswa dan penugasan-->
                 <table>
-                    <tr>
+                    <tr><!--baris pertama-->
                         <th>No</th>
                         <th>Nama</th>
                         <th>NIM</th>
                         <th>Penugasan</th>
                     </tr>
-                    <tr>
+                    <tr><!--baris kedua-->
                         <td>1.</td>
                         <td>Wahyu ifandi</td>
                         <td>220411100187</td>
                         <td>
-                            <!--menggunakan ordered list untuk list penugasan-->
+                            <!--menggunakan ordered list angka untuk list penugasan-->
                             <ol>
                                 <li>Membuat bagian footer</li>
                                 <li>Membuat bagian kelas & sejarah badminton pada homepage</li>
                             </ol>
                         </td>
                     </tr>
-                    <tr>
+                    <tr><!--baris ketiga-->
                         <td>2.</td>
                         <td>Zanuar Rikza Aditiya</td>
                         <td>230411100087</td>
                         <td>
-                            <!--menggunakan ordered list untuk list penugasan-->
+                            <!--menggunakan ordered list angka untuk list penugasan-->
                             <ol>
                                 <li>Membuat layout halaman web</li>
                                 <li>Membuat bagian-1 homepage</li>
@@ -112,12 +113,12 @@
                             </ol>
                         </td>
                     </tr>
-                    <tr>
+                    <tr><!--baris keempat-->
                         <td>3.</td>
                         <td>Nabiilah Rizqi Amalia</td>
                         <td>230411100092</td>
                         <td>
-                            <!--menggunakan ordered list untuk list penugasan-->
+                            <!--menggunakan ordered list angka untuk list penugasan-->
                             <ol>
                                 <li>Mengedit isi bagian sidebar, dan mentor pada homepage </li>
                                 <li>Membuat halaman about us</li>
@@ -125,12 +126,12 @@
                             </ol>
                         </td>
                     </tr>
-                    <tr>
+                    <tr><!--baris kelima-->
                         <td>4.</td>
                         <td>Riefqi Dwi Kurniawan</td>
                         <td>230411100108</td>
                         <td>
-                            <!--menggunakan ordered list untuk list penugasan-->
+                            <!--menggunakan ordered list angka untuk list penugasan-->
                             <ol>
                                 <li>Membuat halaman evaluation</li>
                                 <li>Membuat validasi javascript nomor ponsel (numeric), alamat (alphanumeric)</li>
@@ -138,12 +139,12 @@
                         </td>
                     </tr>
                 </table>
-                <!--sumber link-->
-                <!--bagian 3 berisi sumber link dan referensi web yang dibuat-->
+                <!--link-->
                 <div class="link">
+                <!--div dengan class link menampung judul sumber referensi beserta linknya-->
                     <h3>Sumber Referensi & Gambar : </h3>
-                    <hr>
-                    <!--menggunakan unordered list-->
+                    <hr><!--hr untuk membuat garis horizontal-->
+                    <!--menggunakan unordered list default : disc-->
                     <ul>
                         <li><a href="https://www.pexels.com/id-id/foto/pria-laki-laki-lelaki-muda-11901860/">https://www.pexels.com/id-id/foto/pria-laki-laki-lelaki-muda-11901860/</a></li>
                         <li><a href="https://www.pexels.com/id-id/foto/wanita-dengan-blazer-lengan-panjang-ungu-berdiri-di-trotoar-abu-abu-3522693/">https://www.pexels.com/id-id/foto/wanita-dengan-blazer-lengan-panjang-ungu-berdiri-di-trotoar-abu-abu-3522693/</a></li>
