@@ -224,7 +224,7 @@ function onSubmit() {
       // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault();
        // lalu error di isi sebagai berikut
-      errNomer.innerHTML = "Nomer handphone tidak valid";
+      errNomer.innerHTML = "hanya masukan angka";
     } else if (!lenInput(nomerHandphone.value, 10, 13)) {
       // jika expressi di atas true maka akan masuk ke sini
       // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
