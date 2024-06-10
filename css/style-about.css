@@ -1,18 +1,17 @@
 .about-us {
-	width: 100%; /*lebar halaman 100% dari 1.219*/
-	display: flex;
-  flex-direction: column; /*agar elemen didalam class about-us posisi nya vertikal dari atas ke bawah*/
+	display: flex; /*untuk mengatur tampilan*/
+ 	flex-direction: column; /*agar elemen didalam class about-us posisi nya vertikal dari atas ke bawah seperti kolom*/
 }
 
 /*Deskripsi*/
 .judul{
-	padding: 10px; /*padding konten .judul*/
-	margin-bottom: 30px;
-	height: 400px;
-	color: white; /*warna font*/
-	font-family: Geneva, sans-serif;
-	padding-left: 70px;
-	padding-top: 30px;
+	padding: 10px; /*padding pada div class judul sebanyak 10px*/
+	margin-bottom: 30px; /*margin bawah pada div class judul sebanyak 30px*/
+	height: 400px;/*tinggi pada div class judul sebanyak 400px */
+	color: white; /*warna font putih pada div class judul */
+	font-family: Geneva, sans-serif;/*jenis font geneva sans serif*/
+	padding-left: 70px;/*padding kiri pada div class judul sebanyak 70px*/
+	padding-top: 30px;/*padding atas pada div class judul sebanyak 30px*/
 	background: linear-gradient(to right, #8576FF, #1cb5e0); /*efek gradasi kiri ke kanan (kiri #8576FF, kanan #1cb5e0)*/
 }
 
@@ -23,22 +22,22 @@ ol {
 /*Tabel*/
 table{
 	border-collapse: collapse; /*menjadikan border hanya terlihat satu*/
-	margin-top: 35px;
-	margin-bottom: 30px;
+	margin-top: 35px;/*margin atas pada element table sebanyak 35px*/
+	margin-bottom: 30px;/*margin bawah pada element table sebanyak 30px*/
 }
 
 /*mengatur element table, th, dan td*/
 table,th,td {
-	border: 1px solid #bbb; /*lebar border 1px solid warna: abu-abu*/
-	text-align: center;
+	border: 1px solid #bbb; /*lebar border 1px solid berwarna abu-abu*/
+	text-align: center;/*teks rata tengah*/
 }
 
 /*mengatur element th pada tabel*/
 th {
-	height: 60px;
-	width: 200px;
-	background-color: #8576FF;
-	color: whitesmoke;
+	height: 60px;/*tinggi pada element th sebanyak 60px*/
+	width: 200px;/*lebar pada element th sebanyak 200px*/
+	background-color: #8576FF;/*warna latarbelakang*/
+	color: whitesmoke;/*warna font*/
 }
 
 /*mengatur lebar kolom pertama*/
@@ -46,18 +45,19 @@ th:nth-child(1), td:nth-child(1) {
 	width: 5%; 
 }
 
-/*mengatur text align & padding-left kolom 2 dan 4*/
+/*mengatur rata teks ke kiri & padding kiri kolom 2 dan 4*/
 td:nth-child(2),td:nth-child(4){
 	text-align: left;
 	padding-left: 15px;
 }
 
-/*mengatur padding ke kiri sebanyak 30px di class: link, element h3, "Sumber Referensi & Gambar : "*/
+/*mengatur padding ke kiri sebanyak 15px di class: link element h3*/
 .link h3{
 	padding-left: 15px;
 	margin-bottom: 0px;
 }
 
+/*mengatur margin atas & bawah di class: link*/
 .link {
 	margin-top: 30px;
 	margin-bottom: 70px;
