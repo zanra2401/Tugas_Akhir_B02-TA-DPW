@@ -188,6 +188,8 @@ body {
     text-align: center; /* Mengatur teks di dalam elemen dengan kelas 'innerside' agar berada di tengah secara horizontal */
     color: black; /* Mengatur warna teks dalam elemen dengan kelas 'innerside' menjadi hitam */
     width: 90%; /* Mengatur lebar elemen dengan kelas 'innerside' menjadi 90% dari elemen induknya */
+    display: flex;
+    justigy-content: center;
 }
 
 .icontainer {
