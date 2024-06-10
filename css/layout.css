@@ -178,45 +178,36 @@ body {
 }
 
 .minnerlist {
-    margin: 20px;
-    text-decoration: none;
-    width: 90%;
+    margin: 20px; /* Memberikan margin sebesar 20px di semua sisi elemen dengan kelas 'minnerlist' */
+    text-decoration: none; /* Menghapus dekorasi teks seperti garis bawah pada elemen dengan kelas 'minnerlist' */
+    width: 90%; /* Mengatur lebar elemen dengan kelas 'minnerlist' menjadi 90% dari elemen induknya */
 }
 
 .innerside {
-    margin: 10px;
-    text-align: center;
-    color: black;
-    width: 90%;
-}
-
-.line1 {
-    border: 0px;
-    height: 3px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px; /* Memberikan margin sebesar 10px di semua sisi elemen dengan kelas 'innerside' */
+    text-align: center; /* Mengatur teks di dalam elemen dengan kelas 'innerside' agar berada di tengah secara horizontal */
+    color: black; /* Mengatur warna teks dalam elemen dengan kelas 'innerside' menjadi hitam */
+    width: 90%; /* Mengatur lebar elemen dengan kelas 'innerside' menjadi 90% dari elemen induknya */
 }
 
 .icontainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-left: 140px;
-    width: 100%;
-    margin-bottom: 60px;
+    display: flex; /* Mengatur elemen dengan kelas 'icontainer' untuk menggunakan layout fleksibel */
+    align-items: center; /* Mengatur elemen dalam 'icontainer' untuk disejajarkan di tengah secara vertikal */
+    justify-content: space-between; /* Mengatur elemen dalam 'icontainer' untuk memiliki ruang yang sama di antara mereka */
+    margin-top: 20px; /* Memberikan margin atas sebesar 20px pada elemen dengan kelas 'icontainer' */
+    margin-left: 140px; /* Memberikan margin kiri sebesar 140px pada elemen dengan kelas 'icontainer' */
 }
 
 .circle {
-    display: flex;
-    background-color: white;
-    border-radius: 50px;
-    height: 80px;
-    width: 80px;
-    align-items: center;
+    display: flex; /* Mengatur elemen dengan kelas 'circle' untuk menggunakan layout fleksibel */
+    background-color: white; /* Mengatur warna latar belakang elemen dengan kelas 'circle' menjadi putih */
+    border-radius: 50px; /* Membuat sudut elemen dengan kelas 'circle' menjadi melengkung sehingga berbentuk lingkaran */
+    height: 80px; /* Mengatur tinggi elemen dengan kelas 'circle' menjadi 80px */
+    width: 80px; /* Mengatur lebar elemen dengan kelas 'circle' menjadi 80px */
+    align-items: center; /* Mengatur elemen di dalam 'circle' untuk disejajarkan di tengah secara vertikal */
 }
 
 .icon {
-    width: 50%;
-    height: 50%;
+    width: 50%; /* Mengatur lebar elemen dengan kelas 'icon' menjadi 50% dari elemen induknya */
+    height: 50%; /* Mengatur tinggi elemen dengan kelas 'icon' menjadi 50% dari elemen induknya */
 }
