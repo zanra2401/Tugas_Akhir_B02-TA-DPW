@@ -1,4 +1,4 @@
-// memanggil element input yang di isi oleh user
+-// memanggil element input yang di isi oleh user
 const jadwalLes = document.getElementById("jadwal");
 const nama = document.getElementById("nama");
 const email = document.getElementById("email");
@@ -52,7 +52,7 @@ function isAlphabet(inputValue) {
   return false;
 }
 
-// fungsi ini untuk memvaidasi email
+// fungsi ini untuk memvalidasi email
 function isValidEmail(inputValue) {
   let gmailArr = inputValue.split("@")
   let alphaNumeric = /^[a-z|0-9|.]+$/g
@@ -125,36 +125,31 @@ function isValidJadwal(jadwalLes) {
   // jika tidak ada yang sesuai di atas akan di kembalikan true
   return true;
 }
-
+//fungsi untuk memvalidasi radio button wajib pilih salah satu
 function isNotEmptyRadio() {
-  let kelas = document.getElementsByName("kelas");
-  let kelasValue = false;
+  let kelas = document.getElementsByName("kelas");//mengambil element radio button berdasarkan nama "kelas"
+  let kelasValue = false;//inisialisasi variabel kelasValue dengan nilai false
 
-  for (var i = 0; i < kelas.length; i++) {
-    if (kelas[i].checked) {
-      kelasValue = true;
-      break;
+  for (var i = 0; i < kelas.length; i++) { //looping setiap element di radio button
+    if (kelas[i].checked) { //jika salah satu radio button dipilih(checked) 
+      kelasValue = true; //maka nilai dari variabel kelasValue diubah menjadi true
+      break; //keluar dari loop karena yang dibutuhkan hanya satu yang dipilih
     }
   }
-  if (!kelasValue) {
-    errKelas.innerText = "wajib diisi";
-    return false;
-  } else {
-    errKelas.innerText = "";
+  if (!kelasValue) { // jika tidak ada radio button yang dipilih
+    errKelas.innerText = "wajib diisi"; //maka akan menampilkan pesan kesalahan ini
+    return false; //dan akan mengembalikan nilai false menandakan pemeriksaan gagal
+  } else { //jika ada radio button yang dipilih/kelasValue = true
+    errKelas.innerText = "";// maka pesan kesalahan akan dihapus
   }
-  return true;
+  return true;//mengembalikan nilai true, bahwa pemeriksaan berhasil
 }
 
+//fungsi untuk memvalidasi checkbox wajib dipilih
 function isChecked() {
   let checkboxes = document.getElementsByClassName("pernyataan-check");
   let allcheck = true;
   console.log(checkboxes);
-  for (var i = 0; i < checkboxes.length; i++) {
-    if (!checkboxes[i].checked) {
-      allcheck = false;
-    }
-  }
-
   if (!allcheck) {
     errPernyataan.innerHTML = "Checklist persetujuan";
     return false;
