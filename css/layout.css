@@ -188,14 +188,14 @@ body {
     text-align: center; /* Mengatur teks di dalam elemen dengan kelas 'innerside' agar berada di tengah secara horizontal */
     color: black; /* Mengatur warna teks dalam elemen dengan kelas 'innerside' menjadi hitam */
     width: 90%; /* Mengatur lebar elemen dengan kelas 'innerside' menjadi 90% dari elemen induknya */
-    display: flex;
-    justigy-content: center;
+    display: flex; /*display flex untuk menata content*/
+    justigy-content: center; /*agar content ke tengah*/
 }
 
 .icontainer {
     display: flex; /* Mengatur elemen dengan kelas 'icontainer' untuk menggunakan layout fleksibel */
     align-items: center; /* Mengatur elemen dalam 'icontainer' untuk disejajarkan di tengah secara vertikal */
-    justify-content: space-between; /* Mengatur elemen dalam 'icontainer' untuk memiliki ruang yang sama di antara mereka */
+    justify-content: space-evently; /* Mengatur elemen dalam 'icontainer' untuk memiliki ruang yang sama di antara mereka */
     margin-top: 20px; /* Memberikan margin atas sebesar 20px pada elemen dengan kelas 'icontainer' */
 }
 
