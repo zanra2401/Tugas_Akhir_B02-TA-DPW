@@ -138,7 +138,7 @@ function isNotEmptyRadio() {
     }
   }
   if (!kelasValue) { // jika tidak ada radio button yang dipilih
-    errKelas.innerText = "wajib diisi"; //maka akan menampilkan pesan kesalahan ini
+    errKelas.innerText = "wajib pilih salah satu"; //maka akan menampilkan pesan kesalahan ini
     return false; //dan akan mengembalikan nilai false menandakan pemeriksaan gagal
   } else { //jika ada radio button yang dipilih/kelasValue = true
     errKelas.innerText = "";// maka pesan kesalahan akan dihapus
@@ -149,8 +149,15 @@ function isNotEmptyRadio() {
 //fungsi untuk memvalidasi checkbox wajib dipilih
 function isChecked() {
   let checkboxes = document.getElementsByClassName("pernyataan-check");
-  let allcheck = true;
+  let allcheck = false;
   console.log(checkboxes);
+  
+  for (let i = 0; i < checkboxes.length; i++) { // Looping elemen checkbox dengan nama "pernyataan-check"
+    if (checkboxes[i].checked) { // Jika checkbox dipilih (checked)
+      allcheck = true; // maka variabel allcheck diubah true
+      break; // Keluar dari loop karena checkbox sudah dipilih
+    }
+  }
   if (!allcheck) {
     errPernyataan.innerHTML = "Checklist persetujuan";
     return false;
@@ -159,7 +166,6 @@ function isChecked() {
     return true;
   }
 }
-
 
 // FUNGSI INI AKAN BERJALAN KETIKA FORM DI SUBMIT
 function onSubmit() {
@@ -170,7 +176,7 @@ function onSubmit() {
     // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault();
     // lalu error di isi sebagai berikut
-    errNama.innerHTML = "wajib diisi";
+    errNama.innerHTML = "nama wajib diisi";
   } else {
     // jika tidak kosong akan masuk ke sini
     // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isAlphabet akan di negasikan
@@ -193,7 +199,7 @@ function onSubmit() {
     // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault()
     // lalu error di isi sebagai berikut
-    errEmail.innerHTML = "wajib diisi"
+    errEmail.innerHTML = "email wajib diisi"
   }else {
     let isEmail = isValidEmail(email.value)
     if (isEmail != true) {
@@ -208,7 +214,7 @@ function onSubmit() {
     // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault();
     // lalu error di isi sebagai berikut
-    errNomer.innerHTML = "wajib diisi";
+    errNomer.innerHTML = "nomor ponsel wajib diisi";
   } else {
     // jika tidak kosong akan masuk ke sini
     // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isNumeric akan di negasikan
@@ -242,7 +248,7 @@ function onSubmit() {
     // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault();
     // lalu error di isi sebagai berikut
-    errJadwal.innerHTML = "wajib diisi";
+    errJadwal.innerHTML = "jadwal wajib diisi";
   } else {
     // jika tidak kosong akan masuk ke sini
     // di cek apakah isValidJadwal mengebalikan true
@@ -261,7 +267,7 @@ function onSubmit() {
   }
 
   if (isEmpty(mentor.value)) {
-    errMentor.innerHTML = "wajib diisi"
+    errMentor.innerHTML = "pelatih wajib diisi"
   } else {
     errMentor.innerHTML = ""
   }
@@ -271,7 +277,7 @@ function onSubmit() {
     // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
     event.preventDefault();
     // lalu error di isi sebagai berikut
-    errAlamat.innerHTML = "wajib diisi";
+    errAlamat.innerHTML = "alamat wajib diisi";
   } else {
     // jika tidak kosong akan masuk ke sini
     // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isValidEmail akan di negasikan
