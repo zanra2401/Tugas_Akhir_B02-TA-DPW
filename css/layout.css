@@ -195,7 +195,6 @@ body {
     align-items: center; /* Mengatur elemen dalam 'icontainer' untuk disejajarkan di tengah secara vertikal */
     justify-content: space-between; /* Mengatur elemen dalam 'icontainer' untuk memiliki ruang yang sama di antara mereka */
     margin-top: 20px; /* Memberikan margin atas sebesar 20px pada elemen dengan kelas 'icontainer' */
-    margin-left: 140px; /* Memberikan margin kiri sebesar 140px pada elemen dengan kelas 'icontainer' */
 }
 
 .circle {
