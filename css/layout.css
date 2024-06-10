@@ -189,7 +189,7 @@ body {
     color: black; /* Mengatur warna teks dalam elemen dengan kelas 'innerside' menjadi hitam */
     width: 90%; /* Mengatur lebar elemen dengan kelas 'innerside' menjadi 90% dari elemen induknya */
     display: flex; /*display flex untuk menata content*/
-    flex-direction: center; /*agar tertata secata vertical*/
+    flex-direction: column; /*agar tertata secata vertical*/
     justigy-content: center; /*agar content ke tengah vertical*/
     align-items: center; /*agar conten ketengah secara horizontal*/
 }
