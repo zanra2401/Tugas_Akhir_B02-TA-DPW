@@ -1,6 +1,3 @@
-
-
-// memanggil element input yang di isi oleh user
 const jadwalLes = document.getElementById("jadwal");
 const nama = document.getElementById("nama");
 const email = document.getElementById("email");
