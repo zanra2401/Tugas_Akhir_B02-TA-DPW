@@ -1,3 +1,5 @@
+// memanggil element yang akan berisi inforasi yang di isi oleh user
+// semuanya menggunakan getElementById
 const jadwalLes = document.getElementById("jadwal");
 const nama = document.getElementById("nama");
 const email = document.getElementById("email");
