@@ -197,7 +197,6 @@ body {
 .icontainer {
     display: flex; /* Mengatur elemen dengan kelas 'icontainer' untuk menggunakan layout fleksibel */
     align-items: center; /* Mengatur elemen dalam 'icontainer' untuk disejajarkan di tengah secara vertikal */
-    justify-content: space-evenly; /* Mengatur elemen dalam 'icontainer' untuk memiliki ruang yang sama di antara mereka */
     margin-top: 20px; /* Memberikan margin atas sebesar 20px pada elemen dengan kelas 'icontainer' */
     width: 100%; /*lebar 100% dari induknya*/
 }
