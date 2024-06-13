@@ -1,5 +1,6 @@
 // memanggil element yang akan berisi inforasi yang di isi oleh user
 // semuanya menggunakan getElementById
+// di sini menggunakan const karena variabel tidak akan di rubah lagi variabel tetap
 const jadwalLes = document.getElementById("jadwal");
 const nama = document.getElementById("nama");
 const email = document.getElementById("email");
@@ -17,6 +18,8 @@ const errPernyataan = document.getElementById("err-pernyataan");
 const errEmail = document.getElementById("err-email")
 const errMentor = document.getElementById("err-mentor")
 
+// WARNING:  jika menemukan const berarti variabel dapat di pastikan tidak akan di ubah
+
 // fungsi untuk mengecek apakah sebuah inputan kosong atau tidak
 function isEmpty(inputValue) {
   if (inputValue.trim() == "") {
@@ -30,9 +33,15 @@ function isEmpty(inputValue) {
 
 // fungsi untuk memvalidasi panjang digit karakter
 function lenInput(inputValue, min, max) {
+  // fungsi ini mengecek panjang input namun di trim dulu agar spasi berturut di akhir kalimat atau spasi kosong 
+  // tidak di hitung lalu di bandingkan dengan max dan min jika salah satu menghasilkan true maka panjang inputan 
+  // lebih atau kurang dari yang di tentukan
   if (inputValue.trim().length > max || inputValue.trim().length < min) {
+    // masuk sini jika panjang input > max
+    // atau masuk sini jika panjang input < min
     return false;
   }
+  // jika di atas tidak di jalankan masuk ke sini
   return true;
   
 }
@@ -41,7 +50,7 @@ function lenInput(inputValue, min, max) {
 function isAlphabet(inputValue) {
   // regex di bawah berfungsi untuk memvalidasi apakah inputan ada di antara a-z A-Z dan " " jika tidak salah satu dari
   // character itu maka method regex.test akan mengembalikan false
-  let regex = /^[a-zA-Z ]+$/g;
+  const regex = /^[a-zA-Z ]+$/g;
 
   if (regex.test(inputValue.trim())) {
     // jika regex.test mengembalikan true akan masuk ke cabang ini
@@ -55,11 +64,10 @@ function isAlphabet(inputValue) {
 
 // fungsi ini untuk memvalidasi email
 function isValidEmail(inputValue) {
-  let gmailArr = inputValue.split("@")
-  let alphaNumeric = /^[a-z|0-9|.]+$/g
-  let dotBerturutRegex = /^([a-z0-9]+\.?[a-z0-9]?)+$/g
-  let gmail = /^gmail.com$/g
-  console.log(gmailArr[0])
+  const gmailArr = inputValue.split("@")
+  const alphaNumeric = /^[a-z|0-9|.]+$/g
+  const dotBerturutRegex = /^([a-z0-9]+\.?[a-z0-9]?)+$/g
+  const gmail = /^gmail.com$/g
   if (gmailArr.length != 2) {
     return "gmail yang valid memiliki satu @"
   } else if (!alphaNumeric.test(gmailArr[0])) {
@@ -69,33 +77,51 @@ function isValidEmail(inputValue) {
   } else if (gmailArr[0].length < 6 || gmailArr[1].length  > 30) {
     return "panjang nama gmail yang valid adalah 6 sampai 30 character"
   } else if (!gmail.test(gmailArr[1])) {
-    return "email yang valid adalah gmail.com, contoh: userName@gmail.com"
+    return "email yang valid adalah gmail.com, contoh: username@gmail.com"
   }
   return true
 }
 
 // fungsi untuk memvalidasi nomer handphone
-function isNumeric(inputValue) {
-  let regex = /^08[0-9]+$/g;
-  if (regex.test(inputValue.trim())) {
-    return true;
+function isValidHandphone(inputValue) {
+  // regex numeric berfungsi untuk mengecek apakah yang di masukan user angka atau bukan
+  const numeric = /^[0-9]+$/g
+  // regex noIndonesia berfungsi untuk mengecek apakah nomer yang di masukan user adalah nomer indonesia yang valid
+  const noIndonesia = /^08[0-9]+$/g
+  // tanda ! berarti negasi yang berarti jika !true = false jika !false = true, atau bisa di sebut kebalikanya
+  if (!numeric.test(inputValue)) {
+    // expressi di atas menghasilkan true maka akan masuk ke sini karena kembalian numeric.test adalah false dan di negasi menjadi true
+    // dan mengembalikan pesan error 
+    return "masukan nomer hanphone hanya boleh angka"
+  } else if (!noIndonesia.test(inputValue.trim())){
+    // expressi di atas menghasilkan true maka akan masuk ke sini karena kembalian noIndonesia.test adalah false dan di negasi menjadi true
+    // dan mengembalikan pesan error 
+    return "masukan nomer handphone indonesia di awali dengan 08"
+  } else {
+    // jika selain di atas berarti masukan benar dan mengembalikan true
+    return true
   }
-  return false;
 }
 
 
-
+// fungsi untuk validasi alphanumeric
 function isAlphaNumeric(inputValue) {
+  // regex di bawah berati di jek jika inputan yang di masukan bukan character yang berada dalam kurung 
+  // berarti inputan bukan alphanumeric atau salah
   const regex = /^[a-zA-Z0-9 ,./]+$/;
   if (regex.test(inputValue.trim())) {
+    // jika expressi regex.test() di atas true maka akan masuk ke sini dan mengembalikan true
     return true;
   } else {
+    // jika tidak masuk ke sini dan mengembalikan false
     return false;
   }
 }
 
-// a = /^[a-z0-9.]+@([a-zA-Z0-9_][a-zA-Z0-9_]+[a-zA-Z0-9_])+$/g;
 
+
+
+// fungsi untuk validasi tanggal
 function isValidJadwal(jadwalLes) {
   // mengambil tanggal hari ini dengan menggunakan objek Date tanpa parameter untuk mengambil hari ini
   const hariIni = new Date();
@@ -105,12 +131,12 @@ function isValidJadwal(jadwalLes) {
   // untuk mengambil waktu milidetik menggunakan getTime get time ini mengembalikan milidetik yang berlalu sejak
   // 1 january 1970 atau unix epoch dan ketika kita menggurangi dari sautu date.getTime() ke suatu date.getTime()
   // akan menghasilkan selisih milidetik dapat kita gunakan untuk mencari selisih hari
-  let selisih = jadwal.getTime() - hariIni.getTime();
+  const selisih = jadwal.getTime() - hariIni.getTime();
 
   // mengkonversi selisih milidetik ke hari dengan cara membagi nya dengan berapa banyak milidetik pada satu hari
   // dan kita akan membulatkan ke atas agar suatu hari tidak di lewati sebelum hari itu benar benar di lewati
   // menggunakan Math.ceil()
-  let selisihHari = Math.ceil(selisih / (1000 * 60 * 60 * 24)); 
+  const selisihHari = Math.ceil(selisih / (1000 * 60 * 60 * 24)); 
 
   // minimal jadwal yang di pilih 1 hari setelah pemesanan
   // dan maksimal jadwal yang di pilih 7 hari setelah pemesanan
@@ -126,9 +152,14 @@ function isValidJadwal(jadwalLes) {
   // jika tidak ada yang sesuai di atas akan di kembalikan true
   return true;
 }
+
+
+
+
+
 //fungsi untuk memvalidasi radio button wajib pilih salah satu
 function isNotEmptyRadio() {
-  let kelas = document.getElementsByName("kelas");//mengambil element radio button berdasarkan nama "kelas"
+  const kelas = document.getElementsByName("kelas");//mengambil element radio button berdasarkan nama "kelas"
   let kelasValue = false;//inisialisasi variabel kelasValue dengan nilai false
 
   for (var i = 0; i < kelas.length; i++) { //looping setiap element di radio button
@@ -148,10 +179,9 @@ function isNotEmptyRadio() {
 
 //fungsi untuk memvalidasi checkbox wajib dipilih
 function isChecked() {
-  let checkboxes = document.getElementsByClassName("pernyataan-check");
+  const checkboxes = document.getElementsByClassName("pernyataan-check");
   let allcheck = false;
-  console.log(checkboxes);
-  
+    
   for (let i = 0; i < checkboxes.length; i++) { // Looping elemen checkbox dengan nama "pernyataan-check"
     if (checkboxes[i].checked) { // Jika checkbox dipilih (checked)
       allcheck = true; // maka variabel allcheck diubah true
@@ -167,10 +197,20 @@ function isChecked() {
   }
 }
 
+
+
+
 // FUNGSI INI AKAN BERJALAN KETIKA FORM DI SUBMIT
 function onSubmit() {
   // di fungsi ini menggunakan fungsi fungsi validasi yang telah dibuat di atas
   // pengecekan nama 
+
+
+
+  // WARNING: prevent.default() di kasus ini berfungsi agar form tidak melanjutkan ke halaman lain 
+  // atau agar form tidak melakukan sifat default saat di submit, di kasus ini di panggil saat ada inputan yang salah
+
+
   if (isEmpty(nama.value)) {
     // pertama di cek menggunakan fungsi isEmpty nama jika true maka akan masuk ke sini dan 
     // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
@@ -201,10 +241,17 @@ function onSubmit() {
     // lalu error di isi sebagai berikut
     errEmail.innerHTML = "email wajib diisi"
   }else {
-    let isEmail = isValidEmail(email.value)
+    // jika tidak kosong kita gunakan fungsi isValidEmail dari fungsi yang telah kita buat 
+    // jika email yang di masukan user valid maka fungsi akan mengembalikan nilai true
+    // jika tidak valid akan mengembalikan string error atau pesan error
+    const isEmail = isValidEmail(email.value)
     if (isEmail != true) {
+      // jika isEmail tidak true akan masuk ke sini karena isEmail bukan true
+      // berarti isEmail merupakan pesan error lalu langsung masukan nilai isEmail ke dalam div error email
       errEmail.innerHTML = isEmail
     } else {
+      // jika isEmail selain tidak true atau jika isEmail true akan masuk ke sini
+      // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
       errEmail.innerHTML = ""
     }
   }
@@ -219,18 +266,15 @@ function onSubmit() {
     // jika tidak kosong akan masuk ke sini
     // di cek, karena di sini kita menggunakan operator logical not ! hasil return dari isNumeric akan di negasikan
     // jika isNumeric mengembalikan true akan di menjadi false begitu pun sebaliknya
-    if (!isNumeric(nomerHandphone.value)) {
-      // jika expressi di atas true maka akan masuk ke sini
-      // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
-      event.preventDefault();
-       // lalu error di isi sebagai berikut
-      errNomer.innerHTML = "hanya masukan angka";
-    } else if (!lenInput(nomerHandphone.value, 10, 13)) {
+    const isValidNo = isValidHandphone(nomerHandphone.value)
+    if (!lenInput(nomerHandphone.value, 10, 13)) {
       // jika expressi di atas true maka akan masuk ke sini
       // memanggil event.preventDefault() agar form tidak melanjutkan ke suatu halaman atau actionya tidak berjalan
       event.preventDefault();
       // lalu error di isi sebagai berikut
       errNomer.innerHTML = "Panjang nomer handphone hanya valid di antara 10 sampai 13";
+    } else if (isValidNo != true) {
+       errNomer.innerHTML = isValidNo
     } else {
       // jika selain di atas akan masuk ke sini
       // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
@@ -303,9 +347,7 @@ function onSubmit() {
   }
 
   if (!isChecked()) {
+    // jika !isChecked() menghasilkan true maka masuk ke sini
     event.preventDefault();
   }
-
-  
-  
 }
