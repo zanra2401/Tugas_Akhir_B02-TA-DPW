@@ -19,6 +19,7 @@ const errEmail = document.getElementById("err-email")
 const errMentor = document.getElementById("err-mentor")
 
 // WARNING:  jika menemukan const berarti variabel dapat di pastikan tidak akan di ubah
+// WARNING: tanda seru(!) berarti negasi atau kebalikan
 
 // fungsi untuk mengecek apakah sebuah inputan kosong atau tidak
 function isEmpty(inputValue) {
@@ -64,19 +65,44 @@ function isAlphabet(inputValue) {
 
 // fungsi ini untuk memvalidasi email
 function isValidEmail(inputValue) {
+  // menggunakan method split untuk mebagi string ke beberapa bagian atau menjadi aray berdasarkan delimiter
+  // di bawah menggunakan delimiter @ jadi contoh: manusia@gmail.com akan menjadi [manusia, gmail.com]
   const gmailArr = inputValue.split("@")
+  // regex alphanumeric unutk mengecek apakah inputan yang di masukan hanya character yang di perbolehkan
   const alphaNumeric = /^[a-z|0-9|.]+$/g
+  // regex dot_start_end berfungsi untuk mengecek bahwa charater pertama dan terakhir apakah titik atau bukan
+  const dot_start_end = /^[^.][a-z|0-9|.]+[^.]$/g
+  // regex dorBerturutRegex berfungsi untuk mengecek bahwa tidak ada titik berturut atau tidak
+  // ? berarti charater opsional
   const dotBerturutRegex = /^([a-z0-9]+\.?[a-z0-9]?)+$/g
+  // regex gmail untuk mengecek apakah domain yang dimasukan adalah benar domain gmail
   const gmail = /^gmail.com$/g
+
+  // precabangan 
   if (gmailArr.length != 2) {
+    // jika saat di slpit panjang array di bawah dua atau di atas dua 
+    // berarti di dalam gmail tidak ada @ atau @ lebih dari satu
+    // mengembalikan error
     return "gmail yang valid memiliki satu @"
+  } else if(!dot_start_end.test(gmailArr[0])) {
+    // jika gmail di awali titik maka akan masuk ke sini 
+    // mengembalikan error
+    return "gmail yang valid tidak di awali titik atau/dan tidak di akhiri titik"
   } else if (!alphaNumeric.test(gmailArr[0])) {
+    // jika charater yang di masukan selain yang ada pada regex alphanumeric akan masuk ke sini 
+    // mengembalikan error
     return "gmail yang valid hanya mengandung (a-z atau 0-9 atau titik)"
   } else if (!dotBerturutRegex.test(gmailArr[0])) {
+    // jika ada titik berturut maka akan masuk ke sini 
+    // mengemblikan error
     return "tidak boleh memasukan titik berturut"
   } else if (gmailArr[0].length < 6 || gmailArr[1].length  > 30) {
+    // jika panjang nama dari gmail kurang dari 6 atau lebih dari 30 maka akan masuk ke sini
+    // mengembalikan error
     return "panjang nama gmail yang valid adalah 6 sampai 30 character"
   } else if (!gmail.test(gmailArr[1])) {
+    // jika yang di masukan bukan domain email gmail maka akan masuk ke sini
+    // mengembalikan error
     return "email yang valid adalah gmail.com, contoh: username@gmail.com"
   }
   return true
