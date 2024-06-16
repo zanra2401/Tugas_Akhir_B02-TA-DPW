@@ -209,6 +209,7 @@ body {
     height: 80px; /* Mengatur tinggi elemen dengan kelas 'circle' menjadi 80px */
     width: 80px; /* Mengatur lebar elemen dengan kelas 'circle' menjadi 80px */
     align-items: center; /* Mengatur elemen di dalam 'circle' untuk disejajarkan di tengah secara vertikal */
+    justify-content: center; /* Mengatur elemen dalam 'icontainer' untuk memiliki ruang yang sama di antara mereka */
 }
 
 .icon {
