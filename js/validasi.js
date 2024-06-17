@@ -253,8 +253,13 @@ function onSubmit() {
       event.preventDefault();
       // lalu error di isi sebagai berikut
       errNama.innerHTML = "hanya boleh mengandung alphabet atau spasi";
-    } else {
-      // jika selain di ats akan masuk ke sini
+    } else if(!lenInput(nama.value, 0, 100)) {
+      // jika panjang nama lebih dari 100 maka akan masuk ke sini
+      event.preventDefault()
+      // lalu error di isi sebagai berikut
+      errNama.innerHTML = "maksimal panjang nama adalah 100 character"
+    }else {
+      // jika selain di atas akan masuk ke sini
       // error di kosongi, karena mungkin ini pernah di isi error, agar erronya hilang
       errNama.innerHTML = "";
     }
