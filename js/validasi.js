@@ -169,7 +169,7 @@ function isValidJadwal(jadwalLes) {
   if (selisihHari < 1) {
     // jika selisih hari lebih kecil dari 1 maka berarti jadwal sama dengan  pemesanan
     // atau hari yang di pilih masa lalu
-    return "Hari yang anda masukan tidak valid!!";
+    return "Minimal jadwal les satu hari setelah hari pemesanan!!";
   } else if (selisihHari > 7) {
     // jika selisih hari lebih besar dari 7 maka hari yang di pilih lebih dari 7 hari saat pemesanan
     return "Maksimal jadwal les 7 hari setelah hari pemesanan!!";
