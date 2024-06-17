@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
     <head>
         <meta charset="utf-8">
@@ -8,13 +8,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <!-- mengambil css dengan relative path -->
+        <!-- memanggil css di dalam folder css -->
+        <!-- css di panggil menggunakan relative path -->
         <link rel="stylesheet" type="text/css" href="css/layout.css">
         <link rel="stylesheet" href="css/style-about.css">
     </head>
     <body>
         <!--Bagian HEADER-->
         <div class="header">
+            <!-- berisi gambar logo dan judul header-->
             <div class="logo-name">
                 <img class="logo-header" src="asset/logos.png" alt="">
                 <h3>Victory Badminton</h3>
@@ -54,12 +56,12 @@
             <!-- MENU berisi unordered list yang menampung list menu atau tautan ke halaman lain yang berkaitan dengan website -->
             <ul class="menu-list">
                 <!-- menggunakan ul karena list ini tidak perlu terurut -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="evaluation.html">Evaluation</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="index.html">Home</a></li><!-- link menuju halaman utama -->
+                <li><a href="evaluation.html">Evaluation</a></li><!-- link menuju halaman evaluation -->
+                <li><a href="about-us.html">About Us</a></li><!-- link menuju halaman about us -->
             </ul>
         </div>
-        <!--Content-->
+        <!--Bagian Content-->
         <div class="content">
         <!--div dengan class content menampung isi dari class about-us-->
             <div class="about-us">
@@ -157,12 +159,13 @@
                         <li><a href="https://www.iconfinder.com/icons/5279111/network_fb_social_media_facebook_facebook_logo_icon">https://www.iconfinder.com/icons/5279111/network_fb_social_media_facebook_facebook_logo_icon</a></li>
                         <li><a href="https://www.iconfinder.com/icons/5279112/camera_instagram_social_media_instagram_logo_icon">https://www.iconfinder.com/icons/5279112/camera_instagram_social_media_instagram_logo_icon</a></li>
                         <li><a href="https://www.iconfinder.com/icons/5279123/tweet_twitter_twitter_logo_icon">https://www.iconfinder.com/icons/5279123/tweet_twitter_twitter_logo_icon</a></li>
-                        <li><a href="https://www.craiyon.com/image/FWNKfByCRKaMIMARzovFLw">https://www.craiyon.com/image/FWNKfByCRKaMIMARzovFLw</a></li>
+                        <li><a href="https://www.craiyon.com/image/28-DtyXkQUGJCxltOu0d4Q">https://www.craiyon.com/image/28-DtyXkQUGJCxltOu0d4Q</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <!--Footer-->
+        <!--Bagian Footer-->
+        <!-- Membuat sebuah div dengan kelas 'footer' untuk area footer website -->
         <div class="footer">
             <!-- Membuat sebuah div dengan kelas 'innerside' untuk konten bagian dalam footer -->
             <div class="innerside">
@@ -171,16 +174,22 @@
                     <!-- Membuat sebuah div dengan kelas 'circle' untuk ikon media sosial berbentuk lingkaran -->
                     <div class="circle">
                         <!-- Menampilkan gambar ikon Facebook dengan kelas 'icon', menggunakan file gambar dari 'asset/fb.png', dan menambahkan teks alternatif 'fb-icon' -->
-                        <img class="icon" src="asset/fb.png" alt="fb-icon"></a>
+                        <img class="icon" src="asset/fb.png" alt="fb-icon">
                     </div>
+                    <!--Membuat element p dengan class sosmed untuk nama sosial media-->
+                    <p class="sosmed">victory_badminton</p>
                     <!-- Sama seperti div circle di atas -->
                     <div class="circle">
-                        <img class="icon" src="asset/ig.png" alt="ig-icon"></a>
+                        <img class="icon" src="asset/ig.png" alt="ig-icon">
                     </div>
+                    <!--Membuat element p dengan class sosmed untuk nama sosial media-->
+                    <p class="sosmed">victory_badminton</p>
                     <!-- Sama seperti div circle di atas -->
                     <div class="circle">
-                        <img class="icon" src="asset/tweet.png" alt="tt-icon"></a>
+                        <img class="icon" src="asset/tweet.png" alt="tt-icon">
                     </div>
+                    <!--Membuat element p dengan class sosmed untuk nama sosial media-->
+                    <p class="sosmed">victory_badminton</p>
                 </div>
                 <!-- Menampilkan informasi kontak dan lokasi dalam paragraf, dengan menggunakan tag <br> untuk baris baru -->
                 <p>Contact: 085731788379<br>Alamat kantor: Jl.madura,Kab.Bangkalan</p>
