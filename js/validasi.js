@@ -219,7 +219,7 @@ function isChecked() {
     return false; // mengembalikan nilai false
   } else { //jika checklist tidak dipilih
     errPernyataan.innerHTML = ""; // maka pesan error dihapus
-    return true; mengembalikan nilai true
+    return true; //mengembalikan nilai true
   }
 }
 
