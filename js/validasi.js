@@ -196,11 +196,11 @@ function isNotEmptyRadio() {
   }
   if (!kelasValue) { // jika tidak ada radio button yang dipilih
     errKelas.innerText = "wajib pilih salah satu"; //maka akan menampilkan pesan kesalahan ini
-    return false; //dan akan mengembalikan nilai false menandakan pemeriksaan gagal
+    return false; //dan akan mengembalikan nilai false 
   } else { //jika ada radio button yang dipilih/kelasValue = true
     errKelas.innerText = "";// maka pesan kesalahan akan dihapus
   }
-  return true;//mengembalikan nilai true, bahwa pemeriksaan berhasil
+  return true;//mengembalikan nilai true
 }
 
 //fungsi untuk memvalidasi checkbox wajib dipilih
@@ -214,12 +214,12 @@ function isChecked() {
       break; // Keluar dari loop karena checkbox sudah dipilih
     }
   }
-  if (!allcheck) {
-    errPernyataan.innerHTML = "Checklist persetujuan";
-    return false;
-  } else {
-    errPernyataan.innerHTML = "";
-    return true;
+  if (!allcheck) { // jika checklist tidak dipilih
+    errPernyataan.innerHTML = "Checklist persetujuan"; //maka menampilkan pesan error ini
+    return false; // mengembalikan nilai false
+  } else { //jika checklist tidak dipilih
+    errPernyataan.innerHTML = ""; // maka pesan error dihapus
+    return true; mengembalikan nilai true
   }
 }
 
