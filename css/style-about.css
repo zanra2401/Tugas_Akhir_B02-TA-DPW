@@ -14,7 +14,7 @@
 	padding-top: 30px;/*padding atas pada div class judul sebanyak 30px*/
 	background: linear-gradient(to right, #8576FF, #1cb5e0); /*efek gradasi kiri ke kanan (kiri #8576FF, kanan #1cb5e0)*/
 }
-
+/*Mengatur elemen ol pada class judul dan elemen tabel*/
 ol {
 	list-style-position: outside; /*posisi angka diluar konten list*/
 }

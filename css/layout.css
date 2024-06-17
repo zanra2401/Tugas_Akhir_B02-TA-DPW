@@ -169,7 +169,8 @@ body {
 }
 
 .logo-header {
-    width: 40px;
+    width: 65px;
+    height: 61px;
     margin-left: 20px;
 }
 
@@ -197,7 +198,7 @@ body {
 .icontainer {
     display: flex; /* Mengatur elemen dengan kelas 'icontainer' untuk menggunakan layout fleksibel */
     align-items: center; /* Mengatur elemen dalam 'icontainer' untuk disejajarkan di tengah secara vertikal */
-    justify-content: space-evenly; /* Mengatur elemen dalam 'icontainer' untuk memiliki ruang yang sama di antara mereka */
+    justify-content: center;/* Mengatur elemen dalam 'icontainer' untuk disejajarkan di tengah secara horizontal */
     margin-top: 20px; /* Memberikan margin atas sebesar 20px pada elemen dengan kelas 'icontainer' */
     width: 100%; /*lebar 100% dari induknya*/
 }
@@ -208,11 +209,16 @@ body {
     border-radius: 50px; /* Membuat sudut elemen dengan kelas 'circle' menjadi melengkung sehingga berbentuk lingkaran */
     height: 80px; /* Mengatur tinggi elemen dengan kelas 'circle' menjadi 80px */
     width: 80px; /* Mengatur lebar elemen dengan kelas 'circle' menjadi 80px */
-    align-items: center; /* Mengatur elemen di dalam 'circle' untuk disejajarkan di tengah secara vertikal */
-    justify-content: center; /* Mengatur elemen dalam 'icontainer' untuk memiliki ruang yang sama di antara mereka */
+    justify-content: center;/*Mengatur elemen didalam 'circle' agar ditengah secara horizontal*/
+    align-items: center; /* Mengatur elemen di dalam 'circle' untuk disejajarkan di tengah secara vertikal */   
 }
 
 .icon {
     width: 50%; /* Mengatur lebar elemen dengan kelas 'icon' menjadi 50% dari elemen induknya */
     height: 50%; /* Mengatur tinggi elemen dengan kelas 'icon' menjadi 50% dari elemen induknya */
+}
+
+.sosmed{
+    padding-left: 10px;
+    padding-right: 10px;
 }
