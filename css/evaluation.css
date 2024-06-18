@@ -2,7 +2,6 @@
     display: flex;
     /*mengatur content agar ketengah secara horizontal karena flex default row*/
     justify-content: center;
-    font-family: "Roboto", sans-serif;
 }
 
 .evaluasi {
