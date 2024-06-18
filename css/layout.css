@@ -2,7 +2,9 @@ body {
     margin: 0;
     padding: 0;
     /* font dari google */
-    font-family: "Roboto", sans-serif;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+/*     font-family: "Roboto", sans-serif; */
     /* overflow ini berfungsi untuk jika content melibihi dari element parentnya atau containernya 
     element akan di sembunyikan dan tidak bisa di scroll */
     overflow-x: hidden;
