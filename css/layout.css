@@ -191,7 +191,7 @@ body {
     width: 90%; /* Mengatur lebar elemen dengan kelas 'innerside' menjadi 90% dari elemen induknya */
     display: flex; /* display flex untuk menata content */
     flex-direction: column; /* agar tertata secata vertical */
-    justigy-content: center; /*agar content ke tengah vertical*/
+    justify-content: center; /*agar content ke tengah vertical*/
     align-items: center; /* agar conten ketengah secara horizontal */
 }
 
